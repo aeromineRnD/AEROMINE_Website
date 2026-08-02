@@ -15,9 +15,6 @@ export function Hero() {
       />
 
       <Container className="relative z-10 pb-20 pt-32 md:pb-28">
-        <p className="mb-4 text-sm font-medium uppercase tracking-widest text-aeromine-500">
-          {t("meta")}
-        </p>
         <h1 className="max-w-3xl text-4xl font-bold leading-tight md:text-6xl">
           {t("headline")}
         </h1>
