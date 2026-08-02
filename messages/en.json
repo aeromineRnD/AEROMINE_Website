@@ -219,23 +219,7 @@
         "body": "Start date, target date and overall completion, in the open."
       }
     ],
-    "stagesTitle": "13 preset stages, ready on day one",
-    "stagesLead": "Seeded on project creation, so there is no setup. Bilingual out of the box.",
-    "stages": [
-      "Foundation",
-      "Structural Frame",
-      "Roofing",
-      "Masonry / Walls",
-      "Plumbing Rough-in",
-      "Electrical Rough-in",
-      "Insulation",
-      "Plastering",
-      "Tiling / Flooring",
-      "Fixtures & Fittings",
-      "Painting / Finishing",
-      "External Works",
-      "Final Inspection"
-    ],
+    "stagesTitle": "Stages that fit the project.",
     "notTitle": "What it does not do",
     "notLead": "We would rather you know before you ask.",
     "notItems": [
@@ -245,7 +229,8 @@
       "No subcontractor accounts. The roles are company, buyer, platform.",
       "Notifications are in-app only, and there is no mobile app. It is responsive web."
     ],
-    "cta": "Talk to us"
+    "cta": "Talk to us",
+    "stagesBody": "A full build from foundation to final inspection, or a small renovation with three stages. The presets are a starting point: keep what fits, drop what does not. Bilingual out of the box."
   },
   "contact": {
     "title": "Send us one site.",

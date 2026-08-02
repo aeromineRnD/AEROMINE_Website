@@ -23,7 +23,6 @@ export default function AeroviewOsPage({
   setRequestLocale(locale);
   const t = useTranslations("aeroviewOs");
   const features = t.raw("features") as { title: string; body: string }[];
-  const stages = t.raw("stages") as string[];
   const notItems = t.raw("notItems") as string[];
 
   return (
@@ -70,17 +69,9 @@ export default function AeroviewOsPage({
             <h2 className="text-2xl font-bold md:text-3xl">
               {t("stagesTitle")}
             </h2>
-            <p className="mt-3 max-w-2xl text-muted">{t("stagesLead")}</p>
-            <ol className="mt-8 grid gap-x-10 gap-y-3 sm:grid-cols-2 lg:grid-cols-3">
-              {stages.map((stage, i) => (
-                <li key={stage} className="flex items-baseline gap-3">
-                  <span className="text-sm font-bold text-teal">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <span className="font-medium">{stage}</span>
-                </li>
-              ))}
-            </ol>
+            <p className="mt-4 max-w-2xl text-lg text-muted">
+              {t("stagesBody")}
+            </p>
           </Reveal>
 
           <Reveal>
