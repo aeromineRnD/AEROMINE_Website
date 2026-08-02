@@ -1,0 +1,59 @@
+import Image from "next/image";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import { Container } from "./Container";
+
+export function Footer() {
+  const t = useTranslations("footer");
+
+  return (
+    <footer className="bg-ink text-muted-on-ink">
+      <Container className="grid gap-10 py-16 md:grid-cols-3">
+        <div className="flex flex-col gap-4">
+          <Image
+            src="/brand/logo_white.svg"
+            alt="Aeromine"
+            width={56}
+            height={56}
+          />
+          <p className="text-sm">{t("companyLine")}</p>
+        </div>
+
+        <div className="flex flex-col gap-2 text-sm">
+          <p>{t("address")}</p>
+          <a href="tel:+306981375791" className="hover:text-white">
+            {t("phone")}
+          </a>
+          <a
+            href="mailto:jbrintakis@aeromine.org"
+            className="hover:text-white"
+          >
+            {t("email")}
+          </a>
+        </div>
+
+        <div className="flex flex-col gap-2 text-sm">
+          <a
+            href="https://www.linkedin.com/company/aeromine-info"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white"
+          >
+            {t("linkedin")}
+          </a>
+          <a
+            href="https://github.com/aeromineRnD"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white"
+          >
+            {t("github")}
+          </a>
+          <Link href="/contact" className="mt-4 inline-block w-fit rounded bg-aeromine-500 px-4 py-2 font-medium text-ink transition-colors hover:bg-aeromine-400">
+            {t("cta")}
+          </Link>
+        </div>
+      </Container>
+    </footer>
+  );
+}

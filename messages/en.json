@@ -1,0 +1,297 @@
+{
+  "nav": {
+    "sectors": "Sectors",
+    "work": "Work",
+    "aeroviewOs": "AeroVIEW OS",
+    "team": "Team",
+    "contact": "Contact"
+  },
+  "footer": {
+    "companyLine": "Aeromine IKE · Athens, Greece · Founded 2023",
+    "address": "Polytexneiou 6, Athens, 10433",
+    "phone": "+30 698 137 5791",
+    "email": "jbrintakis@aeromine.org",
+    "linkedin": "LinkedIn",
+    "github": "github.com/aeromineRnD",
+    "cta": "Send us one site"
+  },
+  "home": {
+    "hero": {
+      "headline": "We turn real places into measurable digital twins.",
+      "sub": "Drone capture · 360° interiors · photogrammetry · browser-based digital twins",
+      "meta": "Athens, Greece · Founded 2023",
+      "hint": "Drag to rotate · Scroll to zoom",
+      "caption": "A real Aeromine capture, in your browser",
+      "activate": "View in 3D"
+    },
+    "problem": {
+      "title": "Most site data dies in a folder.",
+      "lead": "A survey flight produces gigabytes of truth about a site. Then it gets exported, zipped, emailed once, and never opened again. Three reasons:",
+      "reasons": [
+        {
+          "title": "The file needs a specialist.",
+          "body": "Point clouds and meshes open in software the client, the site manager and the investor do not have and will not install."
+        },
+        {
+          "title": "It is a snapshot, not a record.",
+          "body": "One flight, one moment. Nothing links this month's reality to last month's."
+        },
+        {
+          "title": "The knowledge stays with one person.",
+          "body": "Measurements, volumes and notes live in someone's project folder."
+        }
+      ],
+      "quote": "A model nobody can open is not documentation. It is storage."
+    },
+    "engine": {
+      "title": "One engine: capture, model, twin.",
+      "lead": "The same three steps run over every site. Only the subject changes.",
+      "steps": [
+        {
+          "name": "Capture",
+          "body": "RTK drone flights for exteriors and terrain. 360° camera for interiors and walkthroughs. Planned overlap and ground control, so it is measurable."
+        },
+        {
+          "name": "Model",
+          "body": "Photogrammetric processing to point cloud and textured mesh. Digital terrain models, contours, areas and volumes. Exports engineers already use: Revit, Civil 3D, AutoCAD, .dwg."
+        },
+        {
+          "name": "Twin",
+          "body": "Opens in a browser: no download, no plugin, no licence. Information layers on top of geometry: keypoints, notes, measurements. Re-fly it and the twin gains a timeline instead of a replacement."
+        }
+      ]
+    },
+    "diff": {
+      "title": "A 3D model is geometry. A digital twin is geometry that knows things.",
+      "modelHeader": "3D model",
+      "twinHeader": "Digital twin",
+      "rows": [
+        {
+          "model": "Shape and texture",
+          "twin": "Shape, texture, and an information layer on top"
+        },
+        {
+          "model": "Opens in specialist software",
+          "twin": "Opens in any browser, on any device"
+        },
+        {
+          "model": "One moment in time",
+          "twin": "Every capture kept, so change is visible"
+        },
+        {
+          "model": "Read it, and that is all",
+          "twin": "Measure it, annotate it, share it, track against it"
+        }
+      ]
+    },
+    "sectorsTeaser": {
+      "title": "One pipeline. Any kind of site.",
+      "lead": "Because it is one pipeline, the sector does not change what we do. Only the deliverable does.",
+      "cta": "Where we work"
+    },
+    "workTeaser": {
+      "title": "Four sites, one pipeline.",
+      "cta": "See the work"
+    },
+    "aeroview": {
+      "title": "The project your client can actually log into.",
+      "body": "Our own platform, built in-house. It closes the distance between the engineer and the client. Upload what you already have, photos, videos or PDFs, and your client sees the project progress in a browser.",
+      "cta": "More about AeroVIEW OS"
+    },
+    "fast": {
+      "title": "We own every step, so custom is cheap.",
+      "cols": [
+        {
+          "title": "We fly it.",
+          "body": "In-house RTK drone operations and 360° capture. No subcontracted pilot, no scheduling chain."
+        },
+        {
+          "title": "We process it.",
+          "body": "Agisoft Metashape, DJI Terra, Pix4D, Blender. The processing decisions are made by the people who planned the flight."
+        },
+        {
+          "title": "We build the viewer.",
+          "body": "React, Three.js, React Three Fiber. AeroVIEW OS, a 3D mall map and standalone model viewers. All ours, all built in-house."
+        }
+      ],
+      "quote": "If the twin you need does not exist yet, we build it rather than quote for it."
+    },
+    "how": {
+      "title": "How we work",
+      "steps": [
+        {
+          "title": "Scoping call.",
+          "body": "You describe the site and what you need to prove or measure. We tell you what is flyable and what is not."
+        },
+        {
+          "title": "Flight.",
+          "body": "One visit. Drone exterior, 360° interior where it is needed, ground control where accuracy demands it."
+        },
+        {
+          "title": "Processing & delivery.",
+          "body": "Point cloud, mesh, terrain model, volumes and plans, in the formats your engineers already open."
+        },
+        {
+          "title": "The twin goes live.",
+          "body": "Your deliverable opens in a browser. Re-fly whenever you need, and the timeline builds itself."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Send us one site.",
+      "body": "Describe the site and what you need to prove or measure. We tell you what is flyable and what is not.",
+      "button": "Contact us"
+    }
+  },
+  "sectors": {
+    "title": "One pipeline. Any kind of site.",
+    "intro": "The same three steps run over every site: capture, model, twin. Only the subject changes.",
+    "whereWeWork": "Where we work",
+    "demoBadge": "In-house demo",
+    "items": {
+      "construction": {
+        "name": "Construction & residential",
+        "deliverable": "Progress captures per phase, stage percentages, client-facing twin"
+      },
+      "quarries": {
+        "name": "Quarries & extraction",
+        "deliverable": "Stockpile and cut/fill volumes, digital terrain models, contours"
+      },
+      "heritage": {
+        "name": "Heritage & archaeology",
+        "deliverable": "Documentation-grade models, elevations, .dwg for restoration teams"
+      },
+      "realEstate": {
+        "name": "Real estate",
+        "deliverable": "360° interiors and exterior twin for listings and remote buyers"
+      },
+      "wind": {
+        "name": "Wind & energy assets",
+        "deliverable": "Tower and site inspection capture"
+      },
+      "agriculture": {
+        "name": "Agriculture & land",
+        "deliverable": "Parcel boundaries, measured areas, terrain models"
+      },
+      "indoor": {
+        "name": "Large indoor spaces",
+        "deliverable": "Mall and facility 3D mapping, with an indoor wayfinding viewer"
+      }
+    }
+  },
+  "work": {
+    "title": "Four sites, one pipeline.",
+    "intro": "Real projects, named and shown. Every deliverable below opened in a browser or a CAD tool the client already had.",
+    "accuracy": "A 12.1 m span measured off the model, checked against a physical scale bar.",
+    "items": {
+      "veikou": {
+        "name": "Alsos Veikou Theater",
+        "type": "Theatre · full 3D capture",
+        "body": "Full photogrammetric capture and processing of the open-air theatre: orthophoto, textured mesh and point cloud."
+      },
+      "quarry": {
+        "name": "Open-pit quarry",
+        "type": "Extraction · volumes",
+        "body": "Site captured and published as a browser twin with keypoints, supporting stockpile volumes and terrain modelling."
+      },
+      "monastery": {
+        "name": "Monastery complex",
+        "type": "Heritage · documentation",
+        "body": "Point-cloud elevations of a historic complex, delivered as .dwg for the restoration team's existing CAD workflow."
+      },
+      "parcel": {
+        "name": "Residential land parcel",
+        "type": "Survey · real estate",
+        "body": "1:200 topographic plan in WGS 84 with measured parcel area, produced from a single drone flight."
+      }
+    }
+  },
+  "aeroviewOs": {
+    "title": "The project your client can actually log into.",
+    "intro": "Our own platform, built in-house. It closes the distance between the engineer and the client.",
+    "positioning": "Upload what you already have, photos, videos or PDFs, and your client sees the project progress in a browser. Drone captures, 3D models and 360° tours are an upgrade, not a requirement.",
+    "features": [
+      {
+        "title": "Every update becomes a phase.",
+        "body": "Photos, a video, a PDF or a drone capture: whatever you upload sits beside the last one with its date, so the client sees a timeline instead of a replaced file."
+      },
+      {
+        "title": "Progress, stage by stage.",
+        "body": "Foundation, roofing, plumbing, external works, final inspection, each carrying a live percentage."
+      },
+      {
+        "title": "Dates the client can see.",
+        "body": "Start date, target date and overall completion, in the open."
+      }
+    ],
+    "stagesTitle": "13 preset stages, ready on day one",
+    "stagesLead": "Seeded on project creation, so there is no setup. Bilingual out of the box.",
+    "stages": [
+      "Foundation",
+      "Structural Frame",
+      "Roofing",
+      "Masonry / Walls",
+      "Plumbing Rough-in",
+      "Electrical Rough-in",
+      "Insulation",
+      "Plastering",
+      "Tiling / Flooring",
+      "Fixtures & Fittings",
+      "Painting / Finishing",
+      "External Works",
+      "Final Inspection"
+    ],
+    "notTitle": "What it does not do",
+    "notLead": "We would rather you know before you ask.",
+    "notItems": [
+      "No document management beyond files attached to updates and material invoices.",
+      "No scheduling or dependencies. Stages have an order, not a critical path. It is not a Gantt tool.",
+      "No cost tracking. Materials record quantity and an invoice URL, not budget versus actual.",
+      "No subcontractor accounts. The roles are company, buyer, platform.",
+      "Notifications are in-app only, and there is no mobile app. It is responsive web."
+    ],
+    "cta": "Talk to us"
+  },
+  "team": {
+    "title": "We fly it, we process it, we build the viewer.",
+    "intro": "Three founders in Athens. One owns the flight, one owns the software, one owns the delivery.",
+    "members": {
+      "brintakis": {
+        "name": "Ioannis Brintakis",
+        "role": "Founder · Mineral Resources Engineer, M.Sc.",
+        "does": "Flight planning, photogrammetry, survey deliverables. Signs the topographic work."
+      },
+      "kokotakis": {
+        "name": "Vasilis Kokotakis",
+        "role": "Software Engineer",
+        "does": "Builds AeroVIEW OS and the 3D viewers. Python, JavaScript, React, Three.js."
+      },
+      "karatosidis": {
+        "name": "Nikos Karatosidis",
+        "role": "Innovation & Technology PM",
+        "does": "Scoping, delivery, client onboarding."
+      }
+    }
+  },
+  "contact": {
+    "title": "Send us one site.",
+    "intro": "Describe the site and what you need to prove or measure. We tell you what is flyable and what is not.",
+    "partnersTitle": "For surveyors, architects and software teams",
+    "partnersBody": "We are the capture-and-twin layer under your service, not a competitor for your client. Bring us a job you turned down.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Describe the site",
+      "submit": "Send",
+      "sending": "Sending...",
+      "success": "Received. We will come back to you within one working day.",
+      "error": "Something went wrong. Email us instead: jbrintakis@aeromine.org"
+    },
+    "details": {
+      "title": "Details",
+      "addressLabel": "Address",
+      "phoneLabel": "Phone",
+      "emailLabel": "Email"
+    }
+  }
+}
