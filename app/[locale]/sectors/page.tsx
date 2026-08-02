@@ -4,7 +4,11 @@ import { use } from "react";
 import { PageShell } from "@/components/layout/PageShell";
 import { Container } from "@/components/layout/Container";
 import { Reveal } from "@/components/motion/Reveal";
+import { Link } from "@/i18n/navigation";
 import { sectors } from "@/lib/sectors";
+
+const chipClass =
+  "inline-flex items-center gap-1.5 rounded-full border border-hairline px-3.5 py-1.5 text-sm font-medium text-teal transition-colors hover:border-aeromine-500 hover:bg-aeromine-50";
 
 export default function SectorsPage({
   params,
@@ -34,6 +38,33 @@ export default function SectorsPage({
                   <p className="mt-3 text-muted">
                     {t(`items.${s.key}.deliverable`)}
                   </p>
+                  {s.demos.length > 0 && (
+                    <div className="mt-auto flex flex-wrap gap-2 pt-5">
+                      {s.demos.map((demo) =>
+                        demo.external ? (
+                          <a
+                            key={demo.href}
+                            href={demo.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={chipClass}
+                          >
+                            {demo.label}
+                            <span aria-hidden>↗</span>
+                          </a>
+                        ) : (
+                          <Link
+                            key={demo.href}
+                            href={demo.href}
+                            className={chipClass}
+                          >
+                            {demo.label}
+                            <span aria-hidden>→</span>
+                          </Link>
+                        )
+                      )}
+                    </div>
+                  )}
                 </div>
               </Reveal>
             ))}
