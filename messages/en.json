@@ -220,17 +220,25 @@
       }
     ],
     "stagesTitle": "Stages that fit the project.",
-    "notTitle": "What it does not do",
-    "notLead": "We would rather you know before you ask.",
-    "notItems": [
-      "No document management beyond files attached to updates and material invoices.",
-      "No scheduling or dependencies. Stages have an order, not a critical path. It is not a Gantt tool.",
-      "No cost tracking. Materials record quantity and an invoice URL, not budget versus actual.",
-      "No subcontractor accounts. The roles are company, buyer, platform.",
-      "Notifications are in-app only, and there is no mobile app. It is responsive web."
-    ],
     "cta": "Talk to us",
-    "stagesBody": "A full build from foundation to final inspection, or a small renovation with three stages. The presets are a starting point: keep what fits, drop what does not. Bilingual out of the box."
+    "stagesBody": "A full build from foundation to final inspection, or a small renovation with three stages. The presets are a starting point: keep what fits, drop what does not. Bilingual out of the box.",
+    "rolesTitle": "Two views of the same build.",
+    "company": {
+      "title": "For the construction company",
+      "steps": [
+        "Create a project and assign it to one or more clients.",
+        "Update stage progress, log materials and invoices, and post media-rich updates as work advances.",
+        "Upload each drone capture as a phase: 3D model, photos, 360° tour."
+      ]
+    },
+    "client": {
+      "title": "For their client",
+      "steps": [
+        "Log in to a personal dashboard of assigned projects.",
+        "Explore the live 3D models, 360° tours and photo galleries, inside and out.",
+        "Follow stage progress, milestones and materials, and message the company directly, all in one place."
+      ]
+    }
   },
   "contact": {
     "title": "Send us one site.",

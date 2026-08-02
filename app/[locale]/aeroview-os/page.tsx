@@ -23,7 +23,6 @@ export default function AeroviewOsPage({
   setRequestLocale(locale);
   const t = useTranslations("aeroviewOs");
   const features = t.raw("features") as { title: string; body: string }[];
-  const notItems = t.raw("notItems") as string[];
 
   return (
     <PageShell title={t("title")} intro={t("intro")}>
@@ -76,20 +75,28 @@ export default function AeroviewOsPage({
 
           <Reveal>
             <div className="rounded-lg bg-ink p-8 text-white md:p-12">
-              <h2 className="text-2xl font-bold text-aeromine-500 md:text-3xl">
-                {t("notTitle")}
+              <h2 className="text-2xl font-bold md:text-3xl">
+                {t("rolesTitle")}
               </h2>
-              <p className="mt-2 text-muted-on-ink">{t("notLead")}</p>
-              <ul className="mt-8 flex max-w-3xl flex-col gap-4">
-                {notItems.map((item) => (
-                  <li
-                    key={item}
-                    className="border-l-2 border-hairline-dark pl-4 text-muted-on-ink"
-                  >
-                    {item}
-                  </li>
+              <div className="mt-10 grid gap-12 md:grid-cols-2">
+                {(["company", "client"] as const).map((role) => (
+                  <div key={role}>
+                    <h3 className="text-sm font-bold uppercase tracking-widest text-aeromine-500">
+                      {t(`${role}.title`)}
+                    </h3>
+                    <ol className="mt-6 flex flex-col gap-5">
+                      {(t.raw(`${role}.steps`) as string[]).map((step, i) => (
+                        <li key={step} className="flex items-start gap-4">
+                          <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-aeromine-500 text-sm font-bold text-ink">
+                            {i + 1}
+                          </span>
+                          <span className="text-muted-on-ink">{step}</span>
+                        </li>
+                      ))}
+                    </ol>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
           </Reveal>
 
