@@ -28,16 +28,9 @@ export default function SectorsPage({
             {sectors.map((s, i) => (
               <Reveal key={s.key} delay={i * 0.05}>
                 <div className="flex h-full flex-col rounded-lg border border-hairline bg-white p-6">
-                  <div className="flex items-start justify-between gap-3">
-                    <h2 className="text-xl font-bold">
-                      {t(`items.${s.key}.name`)}
-                    </h2>
-                    {!s.deliveredForClient && (
-                      <span className="mt-1 shrink-0 rounded-full bg-aeromine-100 px-2.5 py-0.5 text-xs font-medium text-teal">
-                        {t("demoBadge")}
-                      </span>
-                    )}
-                  </div>
+                  <h2 className="text-xl font-bold">
+                    {t(`items.${s.key}.name`)}
+                  </h2>
                   <p className="mt-3 text-muted">
                     {t(`items.${s.key}.deliverable`)}
                   </p>
