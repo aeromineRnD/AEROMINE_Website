@@ -3,7 +3,6 @@
     "sectors": "Τομείς",
     "work": "Έργα",
     "aeroviewOs": "AeroVIEW OS",
-    "team": "Ομάδα",
     "contact": "Επικοινωνία"
   },
   "footer": {
@@ -248,27 +247,6 @@
     ],
     "cta": "Μιλήστε μας"
   },
-  "team": {
-    "title": "Το πετάμε, το επεξεργαζόμαστε, χτίζουμε τον viewer.",
-    "intro": "Τρεις ιδρυτές στην Αθήνα. Ένας έχει την πτήση, ένας το λογισμικό, ένας την παράδοση.",
-    "members": {
-      "brintakis": {
-        "name": "Ιωάννης Μπριντάκης",
-        "role": "Ιδρυτής · Μηχανικός Ορυκτών Πόρων, M.Sc.",
-        "does": "Σχεδιασμός πτήσεων, photogrammetry, τοπογραφικά παραδοτέα. Υπογράφει το τοπογραφικό έργο."
-      },
-      "kokotakis": {
-        "name": "Βασίλης Κοκοτάκης",
-        "role": "Software Engineer",
-        "does": "Χτίζει το AeroVIEW OS και τους 3D viewers. Python, JavaScript, React, Three.js."
-      },
-      "karatosidis": {
-        "name": "Νίκος Καρατοσίδης",
-        "role": "Innovation & Technology PM",
-        "does": "Scoping, παράδοση, onboarding πελατών."
-      }
-    }
-  },
   "contact": {
     "title": "Στείλτε μας ένα έργο.",
     "intro": "Περιγράψτε τον χώρο και τι θέλετε να αποδείξετε ή να μετρήσετε. Σας λέμε τι πετιέται και τι όχι.",
@@ -288,6 +266,24 @@
       "addressLabel": "Διεύθυνση",
       "phoneLabel": "Τηλέφωνο",
       "emailLabel": "Email"
+    },
+    "teamTitle": "Με ποιους θα μιλήσετε",
+    "members": {
+      "brintakis": {
+        "name": "Ιωάννης Μπριντάκης",
+        "role": "Ιδρυτής · Μηχανικός Ορυκτών Πόρων, M.Sc.",
+        "does": "Σχεδιασμός πτήσεων, photogrammetry, τοπογραφικά παραδοτέα. Υπογράφει το τοπογραφικό έργο."
+      },
+      "kokotakis": {
+        "name": "Βασίλης Κοκοτάκης",
+        "role": "Software Engineer",
+        "does": "Χτίζει το AeroVIEW OS και τους 3D viewers. Python, JavaScript, React, Three.js."
+      },
+      "karatosidis": {
+        "name": "Νίκος Καρατοσίδης",
+        "role": "Innovation & Technology PM",
+        "does": "Scoping, παράδοση, onboarding πελατών."
+      }
     }
   }
 }

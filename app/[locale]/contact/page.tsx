@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
@@ -5,6 +6,12 @@ import { PageShell } from "@/components/layout/PageShell";
 import { Container } from "@/components/layout/Container";
 import { Reveal } from "@/components/motion/Reveal";
 import { ContactForm } from "@/components/contact/ContactForm";
+
+const members = [
+  { key: "brintakis", image: "/images/team_brintakis.png" },
+  { key: "kokotakis", image: "/images/team_kokotakis.png" },
+  { key: "karatosidis", image: "/images/team_karatosidis.png" },
+] as const;
 
 export default function ContactPage({
   params,
@@ -69,6 +76,38 @@ export default function ContactPage({
               </div>
             </div>
           </Reveal>
+        </Container>
+
+        <Container className="mt-24">
+          <Reveal>
+            <h2 className="text-sm font-bold uppercase tracking-widest text-teal">
+              {t("teamTitle")}
+            </h2>
+          </Reveal>
+          <div className="mt-8 grid gap-10 md:grid-cols-3">
+            {members.map((m, i) => (
+              <Reveal key={m.key} delay={i * 0.08}>
+                <div className="flex items-start gap-4">
+                  <Image
+                    src={m.image}
+                    alt={t(`members.${m.key}.name`)}
+                    width={160}
+                    height={160}
+                    className="h-20 w-20 shrink-0 rounded-full bg-hairline"
+                  />
+                  <div>
+                    <h3 className="font-bold">{t(`members.${m.key}.name`)}</h3>
+                    <p className="mt-0.5 text-sm font-medium text-teal">
+                      {t(`members.${m.key}.role`)}
+                    </p>
+                    <p className="mt-2 text-sm text-muted">
+                      {t(`members.${m.key}.does`)}
+                    </p>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </Container>
       </section>
     </PageShell>

@@ -3,7 +3,6 @@
     "sectors": "Sectors",
     "work": "Work",
     "aeroviewOs": "AeroVIEW OS",
-    "team": "Team",
     "contact": "Contact"
   },
   "footer": {
@@ -248,27 +247,6 @@
     ],
     "cta": "Talk to us"
   },
-  "team": {
-    "title": "We fly it, we process it, we build the viewer.",
-    "intro": "Three founders in Athens. One owns the flight, one owns the software, one owns the delivery.",
-    "members": {
-      "brintakis": {
-        "name": "Ioannis Brintakis",
-        "role": "Founder · Mineral Resources Engineer, M.Sc.",
-        "does": "Flight planning, photogrammetry, survey deliverables. Signs the topographic work."
-      },
-      "kokotakis": {
-        "name": "Vasilis Kokotakis",
-        "role": "Software Engineer",
-        "does": "Builds AeroVIEW OS and the 3D viewers. Python, JavaScript, React, Three.js."
-      },
-      "karatosidis": {
-        "name": "Nikos Karatosidis",
-        "role": "Innovation & Technology PM",
-        "does": "Scoping, delivery, client onboarding."
-      }
-    }
-  },
   "contact": {
     "title": "Send us one site.",
     "intro": "Describe the site and what you need to prove or measure. We tell you what is flyable and what is not.",
@@ -288,6 +266,24 @@
       "addressLabel": "Address",
       "phoneLabel": "Phone",
       "emailLabel": "Email"
+    },
+    "teamTitle": "Who you'll be talking to",
+    "members": {
+      "brintakis": {
+        "name": "Ioannis Brintakis",
+        "role": "Founder · Mineral Resources Engineer, M.Sc.",
+        "does": "Flight planning, photogrammetry, survey deliverables. Signs the topographic work."
+      },
+      "kokotakis": {
+        "name": "Vasilis Kokotakis",
+        "role": "Software Engineer",
+        "does": "Builds AeroVIEW OS and the 3D viewers. Python, JavaScript, React, Three.js."
+      },
+      "karatosidis": {
+        "name": "Nikos Karatosidis",
+        "role": "Innovation & Technology PM",
+        "does": "Scoping, delivery, client onboarding."
+      }
     }
   }
 }
