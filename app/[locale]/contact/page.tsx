@@ -6,6 +6,16 @@ import { PageShell } from "@/components/layout/PageShell";
 import { Container } from "@/components/layout/Container";
 import { Reveal } from "@/components/motion/Reveal";
 import { ContactForm } from "@/components/contact/ContactForm";
+import { pageMetadata } from "@/lib/metadata";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  return pageMetadata(locale, "/contact", "contact");
+}
 
 const members = [
   { key: "brintakis", image: "/images/team_brintakis.png" },

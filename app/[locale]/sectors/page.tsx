@@ -6,6 +6,17 @@ import { Container } from "@/components/layout/Container";
 import { Reveal } from "@/components/motion/Reveal";
 import { Link } from "@/i18n/navigation";
 import { sectors } from "@/lib/sectors";
+import { pageMetadata } from "@/lib/metadata";
+import { JsonLd, servicesSchema } from "@/components/seo/JsonLd";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  return pageMetadata(locale, "/sectors", "sectors");
+}
 
 const chipClass =
   "inline-flex items-center gap-1.5 rounded-full border border-hairline px-3.5 py-1.5 text-sm font-medium text-teal transition-colors hover:border-aeromine-500 hover:bg-aeromine-50";
@@ -21,6 +32,9 @@ export default function SectorsPage({
 
   return (
     <PageShell title={t("title")} intro={t("intro")}>
+      <JsonLd
+        data={servicesSchema(sectors.map((s) => t(`items.${s.key}.name`)))}
+      />
       <section className="pb-24 md:pb-32">
         <Container>
           <Reveal>

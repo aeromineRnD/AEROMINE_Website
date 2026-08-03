@@ -12,6 +12,7 @@ const navItems = [
   { key: "sectors", href: "/sectors" },
   { key: "work", href: "/work" },
   { key: "aeroviewOs", href: "/aeroview-os" },
+  { key: "faq", href: "/faq" },
   { key: "contact", href: "/contact" },
 ] as const;
 

@@ -1,6 +1,17 @@
 import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
+import { pageMetadata } from "@/lib/metadata";
+import { JsonLd, webSiteSchema } from "@/components/seo/JsonLd";
 import { Hero } from "@/components/hero/Hero";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  return pageMetadata(locale, "", "home");
+}
 import {
   ProblemSection,
   EngineSection,
@@ -23,6 +34,7 @@ export default function HomePage({
 
   return (
     <main>
+      <JsonLd data={webSiteSchema} />
       <Hero />
       <ProblemSection />
       <EngineSection />

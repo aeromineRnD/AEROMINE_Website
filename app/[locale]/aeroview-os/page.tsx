@@ -6,6 +6,17 @@ import { PageShell } from "@/components/layout/PageShell";
 import { Container } from "@/components/layout/Container";
 import { Reveal } from "@/components/motion/Reveal";
 import { Link } from "@/i18n/navigation";
+import { pageMetadata } from "@/lib/metadata";
+import { JsonLd, softwareSchema } from "@/components/seo/JsonLd";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  return pageMetadata(locale, "/aeroview-os", "aeroviewOs");
+}
 
 const screenshots = [
   "/images/av_phasebar.png",
@@ -26,6 +37,7 @@ export default function AeroviewOsPage({
 
   return (
     <PageShell title={t("title")} intro={t("intro")}>
+      <JsonLd data={softwareSchema} />
       <section className="pb-24 md:pb-32">
         <Container className="flex flex-col gap-24">
           <Reveal>

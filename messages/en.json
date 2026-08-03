@@ -3,7 +3,8 @@
     "sectors": "Sectors",
     "work": "Work",
     "aeroviewOs": "AeroVIEW OS",
-    "contact": "Contact"
+    "contact": "Contact",
+    "faq": "FAQ"
   },
   "footer": {
     "companyLine": "Aeromine · Athens, Greece · Founded 2023",
@@ -278,5 +279,73 @@
         "does": "Scoping, delivery, client onboarding."
       }
     }
+  },
+  "metadata": {
+    "home": {
+      "title": "Aeromine · Measurable digital twins of real places",
+      "description": "Drone capture, 360° interiors and photogrammetry, delivered as measurable digital twins that open in any browser. Athens, Greece."
+    },
+    "sectors": {
+      "title": "Sectors",
+      "description": "Construction, quarries, heritage, real estate, wind, agriculture and large indoor spaces: one capture pipeline, a different deliverable per sector."
+    },
+    "work": {
+      "title": "Work",
+      "description": "Four named projects: a theatre capture, quarry volumes, monastery elevations in .dwg, and a 1:200 site survey from a single drone flight."
+    },
+    "aeroviewOs": {
+      "title": "AeroVIEW OS",
+      "description": "Construction progress tracking your client can log into: stage percentages, drone captures as phases, 3D models and 360° tours in the browser."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Send us one site. Describe the place and what you need to measure or prove, and we will tell you plainly what can be captured."
+    },
+    "faq": {
+      "title": "FAQ",
+      "description": "Direct answers on drone capture, photogrammetry deliverables, digital twins in the browser and AeroVIEW OS."
+    }
+  },
+  "faq": {
+    "title": "Questions we actually get.",
+    "intro": "Direct answers, no sales gloss. Anything missing, ask us.",
+    "items": [
+      {
+        "q": "What is a digital twin, and how is it different from a 3D model?",
+        "a": "A 3D model shows shape and texture. A digital twin adds an information layer on top, keypoints, notes and measurements, it opens in any browser, and every capture is kept, so change over time stays visible. In short: the model shows the place, the twin explains it."
+      },
+      {
+        "q": "What deliverables does a drone capture produce?",
+        "a": "Point cloud, textured mesh, digital terrain models, contours, measured areas and volumes, and exports in formats engineers already use: Revit, Civil 3D, AutoCAD, .dwg."
+      },
+      {
+        "q": "Do I need special software to open the results?",
+        "a": "No. The twin opens in any web browser on any device, with no download, plugin or licence. CAD deliverables such as .dwg open in the tools your engineers already have."
+      },
+      {
+        "q": "Are the models measurable, or just visual?",
+        "a": "Measurable. Flights use RTK positioning, planned overlap, and ground control points where accuracy demands it. On one delivered project, a 12.1 m span measured on the model was checked against a physical scale bar."
+      },
+      {
+        "q": "What is AeroVIEW OS?",
+        "a": "Our own construction progress-tracking platform. You give your client a login; they see stage-by-stage progress, media updates, milestones and materials, and each drone capture as a phase with 3D models and 360° tours, all in the browser."
+      },
+      {
+        "q": "Which sectors do you work in?",
+        "a": "Construction and residential, quarries and extraction, heritage and archaeology, real estate, wind and energy assets, agriculture and land, and large indoor spaces. The pipeline is the same everywhere; only the deliverable changes."
+      },
+      {
+        "q": "How does a project start?",
+        "a": "With one phone call. You describe the site and what you need to measure or prove, and we tell you plainly what can be captured and what cannot. Then one visit for the flight, processing, and delivery."
+      },
+      {
+        "q": "Where do you operate?",
+        "a": "We are based in Athens, Greece. Tell us where your site is and we will tell you whether we can capture it."
+      },
+      {
+        "q": "The site keeps changing. Do we capture again?",
+        "a": "Yes, that is the point. Each new flight is added as a phase, the twin gains a timeline, and the change between captures becomes visible."
+      }
+    ]
   }
 }

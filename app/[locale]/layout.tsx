@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
+import { SITE_URL } from "@/lib/site";
+import { JsonLd, organizationSchema } from "@/components/seo/JsonLd";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MotionProvider } from "@/components/motion/MotionProvider";
@@ -15,8 +17,6 @@ const manrope = Manrope({
   variable: "--font-manrope",
 });
 
-const SITE_URL = "https://aeromine.info";
-
 export async function generateMetadata({
   params,
 }: {
@@ -24,21 +24,28 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const isEl = locale === "el";
+  const defaultTitle = isEl
+    ? "Aeromine · Digital twins από πραγματικούς χώρους"
+    : "Aeromine · Measurable digital twins of real places";
+  const description = isEl
+    ? "Αποτύπωση με drone, φωτογραμμετρία και digital twins στον browser. Αθήνα."
+    : "Drone capture, photogrammetry and browser-based digital twins. Athens, Greece.";
+  // No `alternates` here: a layout-level canonical is inherited by every
+  // route and would point all subpages at the homepage. Each page sets its
+  // own via lib/metadata.ts pageMetadata().
   return {
     metadataBase: new URL(SITE_URL),
-    title: {
-      default: isEl
-        ? "Aeromine · Digital twins από πραγματικούς χώρους"
-        : "Aeromine · Measurable digital twins of real places",
-      template: "%s · Aeromine",
+    title: { default: defaultTitle, template: "%s · Aeromine" },
+    description,
+    openGraph: {
+      title: defaultTitle,
+      description,
+      siteName: "Aeromine",
+      locale: isEl ? "el_GR" : "en_US",
+      type: "website",
+      images: ["/opengraph-image.png"],
     },
-    description: isEl
-      ? "Λήψη με drone, photogrammetry και digital twins στον browser. Αθήνα."
-      : "Drone capture, photogrammetry and browser-based digital twins. Athens, Greece.",
-    alternates: {
-      canonical: `/${locale}`,
-      languages: { el: "/el", en: "/en", "x-default": "/el" },
-    },
+    twitter: { card: "summary_large_image" },
   };
 }
 
@@ -62,6 +69,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <body className={`${manrope.variable} font-sans`}>
+        <JsonLd data={organizationSchema} />
         <NextIntlClientProvider>
           <MotionProvider>
             <Header />
