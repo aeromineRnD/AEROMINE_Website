@@ -324,7 +324,7 @@
       },
       {
         "q": "Are the models measurable, or just visual?",
-        "a": "Measurable. Flights use RTK positioning, planned overlap, and ground control points where accuracy demands it. On one delivered project, a 12.1 m span measured on the model was checked against a physical scale bar."
+        "a": "Measurable. Flights use RTK positioning, planned overlap, and ground control points where accuracy demands it."
       },
       {
         "q": "What is AeroVIEW OS?",
@@ -340,7 +340,7 @@
       },
       {
         "q": "Where do you operate?",
-        "a": "We are based in Athens, Greece. Tell us where your site is and we will tell you whether we can capture it."
+        "a": "We are based in Athens and work all over Greece. We also take on projects abroad, in the EU and beyond: tell us where your site is."
       },
       {
         "q": "The site keeps changing. Do we capture again?",

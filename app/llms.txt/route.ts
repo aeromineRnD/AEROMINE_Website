@@ -9,6 +9,8 @@ const body = `# Aeromine
 > (founded ${COMPANY.foundingDate}). We fly drone and 360° captures of real
 > places, process them with photogrammetry, and deliver measurable digital
 > twins that open in any web browser, no specialist software required.
+> Based in Athens, working all over Greece, with projects in the EU and
+> beyond welcome.
 
 Primary language: Greek (${SITE_URL}/el). English: ${SITE_URL}/en.
 

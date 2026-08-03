@@ -29,7 +29,10 @@ export const organizationSchema = {
   },
   founder: COMPANY.founders.map((name) => ({ "@type": "Person", name })),
   sameAs: [COMPANY.linkedin, COMPANY.github],
-  areaServed: { "@type": "Country", name: "Greece" },
+  areaServed: [
+    { "@type": "Country", name: "Greece" },
+    { "@type": "AdministrativeArea", name: "European Union" },
+  ],
   knowsAbout: [
     "drone capture",
     "photogrammetry",
