@@ -9,6 +9,7 @@ import { JsonLd, organizationSchema } from "@/components/seo/JsonLd";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MotionProvider } from "@/components/motion/MotionProvider";
+import { Analytics } from "@/components/analytics/Analytics";
 import "../globals.css";
 
 const manrope = Manrope({
@@ -46,6 +47,11 @@ export async function generateMetadata({
       images: ["/opengraph-image.png"],
     },
     twitter: { card: "summary_large_image" },
+    // Search Console verification, when the property is claimed by meta tag
+    // rather than by DNS. Absent env var emits no tag at all.
+    verification: process.env.GOOGLE_SITE_VERIFICATION
+      ? { google: process.env.GOOGLE_SITE_VERIFICATION }
+      : undefined,
   };
 }
 
@@ -70,6 +76,7 @@ export default async function LocaleLayout({
     <html lang={locale}>
       <body className={`${manrope.variable} font-sans`}>
         <JsonLd data={organizationSchema} />
+        <Analytics />
         <NextIntlClientProvider>
           <MotionProvider>
             <Header />
