@@ -133,7 +133,12 @@ keeps the site and the sales meeting in one voice. Full source:
 | Sectors | One pipeline. Any kind of site. |
 | Work | Four sites, one pipeline. |
 | AeroVIEW OS | The project your client can actually log into. |
-| Why we are fast | We own every step, so custom is cheap. |
+| Why we are fast | We own every step. That is why custom is simple, not expensive. |
+
+⚠️ **One line now differs from the deck.** The deck still reads *"We own every step, so custom is
+cheap."* The site says *"custom is simple, not expensive"*: in a premium engineering sale the word
+"cheap" prices the work down rather than describing the advantage. The Greek deck line already
+avoided it. **Align the English deck to the site**, not the other way round.
 
 **Why we are fast, three columns**
 
