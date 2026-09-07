@@ -3,6 +3,7 @@ import { use } from "react";
 import { pageMetadata } from "@/lib/metadata";
 import { JsonLd, webSiteSchema } from "@/components/seo/JsonLd";
 import { Hero } from "@/components/hero/Hero";
+import type { Locale } from "@/i18n/routing";
 
 export async function generateMetadata({
   params,
@@ -16,6 +17,7 @@ import {
   ProblemSection,
   EngineSection,
   DifferentiatorSection,
+  ServicesTeaser,
   SectorsTeaser,
   WorkTeaser,
   FeaturedModelSection,
@@ -28,7 +30,7 @@ import {
 export default function HomePage({
   params,
 }: {
-  params: Promise<{ locale: string }>;
+  params: Promise<{ locale: Locale }>;
 }) {
   const { locale } = use(params);
   setRequestLocale(locale);
@@ -40,6 +42,7 @@ export default function HomePage({
       <ProblemSection />
       <EngineSection />
       <DifferentiatorSection />
+      <ServicesTeaser locale={locale} />
       <SectorsTeaser />
       <WorkTeaser />
       <FeaturedModelSection />

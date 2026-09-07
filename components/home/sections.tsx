@@ -1,6 +1,9 @@
 import Image from "next/image";
+import NextLink from "next/link";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import type { Locale } from "@/i18n/routing";
+import { services, servicePath } from "@/lib/services";
 import { Container } from "@/components/layout/Container";
 import { Reveal } from "@/components/motion/Reveal";
 import { sectors } from "@/lib/sectors";
@@ -119,6 +122,54 @@ export function DifferentiatorSection() {
               ))}
             </tbody>
           </table>
+        </Reveal>
+      </Container>
+    </section>
+  );
+}
+
+// Sits after the twin comparison on purpose. The twin is what wins the argument
+// on this page; the service list is what a visitor clicks once they are sold on
+// it, and what carries the search terms people actually type.
+export function ServicesTeaser({ locale }: { locale: Locale }) {
+  const t = useTranslations("home.servicesTeaser");
+  const tServices = useTranslations("services");
+
+  return (
+    <section className="bg-white py-24 md:py-32">
+      <Container>
+        <Reveal>
+          <h2 className="max-w-3xl text-3xl font-bold leading-tight md:text-5xl">
+            {t("title")}
+          </h2>
+          <p className="mt-6 max-w-2xl text-lg text-muted">{t("lead")}</p>
+        </Reveal>
+
+        <div className="mt-14 grid gap-6 md:grid-cols-3">
+          {services.map((s, i) => (
+            <Reveal key={s.key} delay={(i % 3) * 0.06}>
+              <NextLink
+                href={servicePath(locale, s)}
+                className="flex h-full flex-col rounded-lg border border-hairline p-6 transition-colors hover:border-aeromine-500 hover:bg-aeromine-50"
+              >
+                <h3 className="text-lg font-bold">
+                  {tServices(`items.${s.key}.name`)}
+                </h3>
+                <p className="mt-3 text-sm text-muted">
+                  {tServices(`items.${s.key}.card`)}
+                </p>
+              </NextLink>
+            </Reveal>
+          ))}
+        </div>
+
+        <Reveal className="mt-10">
+          <NextLink
+            href={`/${locale}/services`}
+            className="font-bold text-teal underline decoration-aeromine-500 decoration-2 underline-offset-4 hover:decoration-aeromine-600"
+          >
+            {t("cta")} →
+          </NextLink>
         </Reveal>
       </Container>
     </section>

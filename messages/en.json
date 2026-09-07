@@ -1,6 +1,7 @@
 {
   "nav": {
-    "sectors": "Sectors",
+    "services": "Services",
+    "sectors": "Industries",
     "work": "Work",
     "aeroviewOs": "AeroVIEW OS",
     "contact": "Contact",
@@ -80,6 +81,11 @@
           "twin": "Measure it, annotate it, share it, track against it"
         }
       ]
+    },
+    "servicesTeaser": {
+      "title": "Six services. One pipeline behind all of them.",
+      "lead": "The twin is where this ends up. This is what you actually buy on the way there.",
+      "cta": "All services"
     },
     "sectorsTeaser": {
       "title": "One pipeline. Any kind of site.",
@@ -542,7 +548,7 @@
       "description": "Drone mapping, photogrammetry, 3D models and digital twins, orthophotos and terrain models, volumes, 360° interiors and aerial inspection, across Greece."
     },
     "sectors": {
-      "title": "Sectors",
+      "title": "Industries",
       "description": "Construction, quarries, heritage, real estate, wind, agriculture and large indoor spaces: one capture pipeline, a different deliverable per sector."
     },
     "work": {

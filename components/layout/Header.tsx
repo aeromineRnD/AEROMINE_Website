@@ -8,11 +8,14 @@ import { Container } from "./Container";
 import { LocaleSwitcher } from "./LocaleSwitcher";
 import { clsx } from "clsx";
 
+// Services first: a visitor should meet what we deliver before where we apply
+// it. FAQ is deliberately not here, it lives in the footer where a B2B visitor
+// looks for it, so the main nav stays about the sale.
 const navItems = [
+  { key: "services", href: "/services" },
   { key: "sectors", href: "/sectors" },
   { key: "work", href: "/work" },
   { key: "aeroviewOs", href: "/aeroview-os" },
-  { key: "faq", href: "/faq" },
   { key: "contact", href: "/contact" },
 ] as const;
 
