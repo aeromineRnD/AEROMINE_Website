@@ -16,6 +16,7 @@ export async function generateMetadata({
 import {
   ProblemSection,
   EngineSection,
+  FormatsSection,
   DifferentiatorSection,
   ServicesTeaser,
   SectorsTeaser,
@@ -41,6 +42,7 @@ export default function HomePage({
       <Hero />
       <ProblemSection />
       <EngineSection />
+      <FormatsSection />
       <DifferentiatorSection />
       <ServicesTeaser locale={locale} />
       <SectorsTeaser />

@@ -59,6 +59,12 @@
         }
       ]
     },
+    "formats": {
+      "title": "It has to open in what you already have.",
+      "lead": "A deliverable is worth nothing if opening it needs a licence you do not own. Every export lands in a format your engineers already work in, and the twin needs no software at all.",
+      "opensIn": "Opens in",
+      "formats": "Formats"
+    },
     "diff": {
       "title": "A 3D model is geometry. A digital twin is geometry that knows things.",
       "modelHeader": "3D model",

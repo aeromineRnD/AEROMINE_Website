@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 import { services, servicePath } from "@/lib/services";
+import { opensIn, exportFormats } from "@/lib/formats";
 import { Container } from "@/components/layout/Container";
 import { Reveal } from "@/components/motion/Reveal";
 import { sectors } from "@/lib/sectors";
@@ -74,6 +75,51 @@ export function EngineSection() {
               </p>
               <h3 className="mt-3 text-2xl font-bold">{s.name}</h3>
               <p className="mt-3 text-muted-on-ink">{s.body}</p>
+            </Reveal>
+          ))}
+        </div>
+      </Container>
+    </section>
+  );
+}
+
+// Straight after the pipeline section on purpose: the visitor has just been
+// told what gets produced, and the next question is always whether they can
+// open it. The audit put this near the process for the same reason.
+export function FormatsSection() {
+  const t = useTranslations("home.formats");
+
+  return (
+    <section className="border-t border-hairline-dark bg-ink py-20 text-white md:py-24">
+      <Container>
+        <Reveal>
+          <h2 className="max-w-3xl text-2xl font-bold leading-tight md:text-4xl">
+            {t("title")}
+          </h2>
+          <p className="mt-5 max-w-2xl text-muted-on-ink">{t("lead")}</p>
+        </Reveal>
+
+        <div className="mt-12 grid gap-10 md:grid-cols-2">
+          {(
+            [
+              ["opensIn", opensIn],
+              ["formats", exportFormats],
+            ] as const
+          ).map(([key, values], i) => (
+            <Reveal key={key} delay={i * 0.08}>
+              <h3 className="text-sm font-bold uppercase tracking-widest text-aeromine-500">
+                {t(key)}
+              </h3>
+              <ul className="mt-5 flex flex-wrap gap-2.5">
+                {values.map((v) => (
+                  <li
+                    key={v}
+                    className="rounded border border-hairline-dark px-3.5 py-2 text-sm font-medium"
+                  >
+                    {v}
+                  </li>
+                ))}
+              </ul>
             </Reveal>
           ))}
         </div>
