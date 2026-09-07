@@ -1,4 +1,16 @@
 import { COMPANY, SITE_URL } from "@/lib/site";
+import { services, servicePath } from "@/lib/services";
+import el from "@/messages/el.json";
+
+// Greek is the primary language here, so the service list quotes the Greek
+// names and the Greek URLs. Names come from the messages file rather than
+// being retyped, so this cannot drift from what the pages actually say.
+const serviceLines = services
+  .map((s) => {
+    const item = el.services.items[s.key as keyof typeof el.services.items];
+    return `- ${item.name}: ${SITE_URL}${servicePath("el", s)}`;
+  })
+  .join("\n");
 
 // llms.txt: a plain-markdown site summary for LLM crawlers and AI search
 // engines (llmstxt.org convention). Facts only; keep consistent with the
@@ -29,6 +41,12 @@ One pipeline, three steps, for every kind of site:
 
 Everything is in-house: the flights, the photogrammetry processing, and the
 3D viewers themselves (built with React and Three.js).
+
+## Services
+
+${serviceLines}
+
+All services: ${SITE_URL}/el/services
 
 ## Sectors
 
