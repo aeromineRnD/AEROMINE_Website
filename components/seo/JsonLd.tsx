@@ -80,6 +80,24 @@ export function servicesSchema(names: string[]) {
   };
 }
 
+export function serviceSchema(
+  name: string,
+  description: string,
+  path: string
+) {
+  return {
+    "@type": "Service",
+    name,
+    description,
+    url: `${SITE_URL}${path}`,
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: [
+      { "@type": "Country", name: "Greece" },
+      { "@type": "AdministrativeArea", name: "European Union" },
+    ],
+  };
+}
+
 export function faqSchema(qas: { q: string; a: string }[]) {
   return {
     "@type": "FAQPage",

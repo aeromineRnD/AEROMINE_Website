@@ -145,6 +145,213 @@
       "button": "Contact us"
     }
   },
+  "services": {
+    "index": {
+      "title": "What we actually deliver.",
+      "intro": "Six services, one pipeline behind all of them. Pick the one that matches what you need to prove, measure or document."
+    },
+    "labels": {
+      "deliverables": "What you get",
+      "process": "How it runs",
+      "formats": "Formats and compatibility",
+      "related": "Where this gets used",
+      "readMore": "What this involves",
+      "allServices": "All services"
+    },
+    "cta": {
+      "title": "Send us one site.",
+      "body": "Describe the place and what has to be proven or measured. We tell you plainly what is flyable and what is not.",
+      "button": "Contact us"
+    },
+    "items": {
+      "droneMapping": {
+        "name": "Drone mapping & photogrammetry",
+        "card": "RTK flights, planned overlap and ground control, processed into geometry an engineer can check.",
+        "h1": "Drone mapping that holds up when someone measures it.",
+        "lead": "The flight is the easy part. What decides whether the survey was worth paying for is whether the output survives a second opinion, so we plan overlap, use RTK positioning, and put ground control on the site when the accuracy target needs it.",
+        "deliverables": [
+          "Orthophoto of the site, georeferenced",
+          "Dense point cloud",
+          "Textured 3D mesh",
+          "Digital terrain model and contours",
+          "Measured areas and volumes",
+          "CAD exports in the formats your engineers already open"
+        ],
+        "process": [
+          {
+            "title": "Scoping call.",
+            "body": "You describe the site and what has to be proven or measured. We tell you what is flyable and what is not, before anyone books a day."
+          },
+          {
+            "title": "One visit.",
+            "body": "RTK drone flight with planned overlap, plus ground control points where the accuracy target demands them."
+          },
+          {
+            "title": "Processing and delivery.",
+            "body": "Photogrammetric reconstruction in-house, then the deliverables in the formats your engineers already open."
+          }
+        ],
+        "formats": "DWG · DXF · GeoTIFF · LAS/LAZ · OBJ · GLB. Opens in AutoCAD, Civil 3D, Revit, QGIS, or a browser.",
+        "metaTitle": "Drone Mapping & Photogrammetry Services in Greece",
+        "metaDescription": "RTK drone mapping and photogrammetry across Greece: orthophotos, point clouds, terrain models and CAD exports, delivered by the team that planned the flight."
+      },
+      "modelling3d": {
+        "name": "3D modelling & digital twins",
+        "card": "The same capture, delivered as geometry your engineers open and as a twin your client opens.",
+        "h1": "A 3D model shows the place. A twin explains it.",
+        "lead": "We build both from one capture. The model is shape and texture. The twin adds keypoints, notes and measurements on top, opens in any browser on any device, and keeps every capture, so change over time stays visible instead of being overwritten.",
+        "deliverables": [
+          "Textured 3D mesh and dense point cloud",
+          "Browser twin with keypoints and information layers",
+          "A phase per capture, so nothing overwrites last month",
+          "Measurement and annotation on top of the geometry",
+          "A standalone viewer where an off-the-shelf one does not fit",
+          "Exports in GLB, OBJ and LAS/LAZ"
+        ],
+        "process": [
+          {
+            "title": "Capture.",
+            "body": "Drone for exteriors and terrain, 360° camera for interiors, planned so the result is measurable rather than merely photogenic."
+          },
+          {
+            "title": "Model.",
+            "body": "Photogrammetric processing to point cloud and textured mesh, with the terrain products the project needs."
+          },
+          {
+            "title": "Twin.",
+            "body": "The geometry gets an information layer and a URL. No download, no plugin, no licence for whoever you send it to."
+          }
+        ],
+        "formats": "GLB · OBJ · LAS/LAZ, plus a browser twin that needs no download, no plugin and no licence.",
+        "metaTitle": "3D Modelling & Digital Twin Services",
+        "metaDescription": "Survey-grade 3D models and browser-based digital twins from drone and 360° capture, with keypoints, measurements and a timeline across captures."
+      },
+      "orthophotoDtm": {
+        "name": "Orthophotos, DTM/DSM & contours",
+        "card": "The georeferenced base layer that every other drawing on the project sits on top of.",
+        "h1": "The base layer every other drawing sits on.",
+        "lead": "Orthophoto, terrain model and contours, georeferenced and delivered in the formats your CAD and GIS already read. For most projects this is not an extra: it is the deliverable everything else gets drawn on top of.",
+        "deliverables": [
+          "Georeferenced orthophoto of the site",
+          "Digital terrain model (DTM)",
+          "Digital surface model (DSM)",
+          "Contour lines at the interval you specify",
+          "Elevation ramps and sections",
+          "Delivered ready to drop into AutoCAD, Civil 3D or QGIS"
+        ],
+        "process": [
+          {
+            "title": "Flight planning.",
+            "body": "Overlap, altitude and ground control chosen against the ground resolution the project actually needs."
+          },
+          {
+            "title": "Reconstruction.",
+            "body": "Photogrammetric processing to a dense cloud, then classification into ground and surface."
+          },
+          {
+            "title": "Export.",
+            "body": "Terrain products and contours written out in the coordinate system your drawings already use."
+          }
+        ],
+        "formats": "GeoTIFF · DWG · DXF · LAS/LAZ. Opens in AutoCAD, Civil 3D or QGIS.",
+        "metaTitle": "Orthophotos, DTM/DSM & Contour Mapping",
+        "metaDescription": "Georeferenced orthophotos, digital terrain and surface models and contour lines from drone photogrammetry, exported for AutoCAD, Civil 3D and QGIS."
+      },
+      "volumes": {
+        "name": "Area & volume calculations",
+        "card": "Stockpiles, cut and fill, parcel areas. Measured off a georeferenced model, and repeatable.",
+        "h1": "Volumes you can defend in a meeting.",
+        "lead": "Stockpiles, cut and fill, excavated material, parcel areas. Measured off a georeferenced model rather than estimated from a tape and someone's memory, and repeatable, so the next flight compares against this one instead of starting over. Our stated accuracy on volumes and dimensions is 0.01 m.",
+        "deliverables": [
+          "Stockpile volumes",
+          "Cut and fill against a design surface or a previous capture",
+          "Measured parcel areas and boundaries",
+          "The terrain model and contours behind every figure",
+          "A repeat capture that compares directly to the last one",
+          "Figures delivered with the model they came from"
+        ],
+        "process": [
+          {
+            "title": "Capture with control.",
+            "body": "Ground control points where the number has to stand up, because a volume is only as good as its georeferencing."
+          },
+          {
+            "title": "Surface reconstruction.",
+            "body": "Dense cloud, then the ground surface the measurement gets taken against."
+          },
+          {
+            "title": "Measurement.",
+            "body": "Volumes and areas computed on the model, delivered with the model so anyone can check the number themselves."
+          }
+        ],
+        "formats": "Figures delivered alongside the model they came from: DWG · DXF · GeoTIFF · LAS/LAZ.",
+        "metaTitle": "Drone Area & Volume Calculations",
+        "metaDescription": "Stockpile volumes, cut and fill and measured parcel areas from drone photogrammetry, delivered with the georeferenced model behind every figure."
+      },
+      "interior360": {
+        "name": "360° interior documentation",
+        "card": "Interiors captured in 360° and stitched into a walkthrough that opens in a browser.",
+        "h1": "The inside of the building, without the site visit.",
+        "lead": "360° capture of interiors, stitched into a walkthrough that opens in a browser. For buyers who are abroad, for teams that cannot get on site every week, and for anyone who needs the as-built condition on record rather than in a phone call.",
+        "deliverables": [
+          "360° walkthrough of the interior spaces",
+          "Viewpoints linked room to room",
+          "Notes and keypoints placed on the tour",
+          "A capture per date, so the condition on that day stays on record",
+          "Combined with the exterior twin where both are captured",
+          "A link you send, that opens on any device"
+        ],
+        "process": [
+          {
+            "title": "Walkthrough plan.",
+            "body": "We agree the route and the viewpoints before the visit, so the tour reads as a building rather than a set of rooms."
+          },
+          {
+            "title": "Capture.",
+            "body": "360° camera through the agreed route, in one visit, with the exterior flown at the same time where it is useful."
+          },
+          {
+            "title": "Publish.",
+            "body": "Stitched, linked and published to a URL. Nothing to install for whoever you send it to."
+          }
+        ],
+        "formats": "A browser tour on any device. No download, no plugin, no licence.",
+        "metaTitle": "360° Interior Documentation & Virtual Tours",
+        "metaDescription": "360° interior capture published as a browser walkthrough with linked viewpoints and notes, dated so the as-built condition stays on record."
+      },
+      "inspection": {
+        "name": "Aerial inspection & site documentation",
+        "card": "High-resolution aerial capture of structures and sites, kept as a dated record.",
+        "h1": "A record of what the site looked like, on a date.",
+        "lead": "High-resolution aerial capture of structures and sites, kept as a dated record rather than a folder of photos nobody can find. The value shows up the moment somebody disputes what was there, or when this month has to be compared against last month.",
+        "deliverables": [
+          "High-resolution aerial photos and video",
+          "Orthophoto of the site",
+          "Close-range capture of structures and assets",
+          "A dated capture you can compare against later",
+          "Delivered as files you own",
+          "Published as a browser twin where that helps"
+        ],
+        "process": [
+          {
+            "title": "Scoping.",
+            "body": "What has to be documented, at what detail, and whether it needs to be measurable or only visible."
+          },
+          {
+            "title": "Flight.",
+            "body": "One visit, exteriors and close-range capture of the structures that matter."
+          },
+          {
+            "title": "Delivery.",
+            "body": "Files you own, dated, in a structure that still makes sense when you open it in a year."
+          }
+        ],
+        "formats": "High-resolution imagery and video, plus GeoTIFF and a browser twin where the project calls for one.",
+        "metaTitle": "Aerial Inspection & Site Documentation",
+        "metaDescription": "Drone inspection and site documentation across Greece: high-resolution aerial capture of structures and sites, kept as a dated, comparable record."
+      }
+    }
+  },
   "sectors": {
     "title": "One pipeline. Any kind of site.",
     "intro": "The same three steps run over every site: capture, model, twin. Only the subject changes.",
@@ -329,6 +536,10 @@
     "home": {
       "title": "Aeromine · Measurable digital twins of real places",
       "description": "Drone capture, 360° interiors and photogrammetry, delivered as measurable digital twins that open in any browser. Athens, Greece."
+    },
+    "services": {
+      "title": "Services",
+      "description": "Drone mapping, photogrammetry, 3D models and digital twins, orthophotos and terrain models, volumes, 360° interiors and aerial inspection, across Greece."
     },
     "sectors": {
       "title": "Sectors",
