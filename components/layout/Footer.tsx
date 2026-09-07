@@ -24,7 +24,7 @@ export function Footer() {
       <Container className="grid gap-10 py-16 md:grid-cols-3">
         <div className="flex flex-col gap-4">
           <Image
-            src="/brand/logo_white.svg"
+            src="/brand/logo_gold.svg"
             alt="Aeromine"
             width={56}
             height={56}

@@ -29,7 +29,7 @@ export function Header() {
       <Container className="flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
           <Image
-            src="/brand/logo_white.svg"
+            src="/brand/logo_gold.svg"
             alt="Aeromine"
             width={44}
             height={44}
