@@ -19,7 +19,10 @@ export const organizationSchema = {
   name: COMPANY.name,
   legalName: COMPANY.legalName,
   url: SITE_URL,
-  logo: `${SITE_URL}/brand/logo_gold.png`,
+  // Ink, not gold. Google renders the Organization logo on a white card, and
+  // gold on white is about 1.7:1 (WEBSITE_CONTEXT.md §8: on light backgrounds
+  // gold is a fill colour, never the mark itself).
+  logo: `${SITE_URL}/brand/logo_ink.png`,
   foundingDate: COMPANY.foundingDate,
   email: COMPANY.email,
   telephone: COMPANY.phone,
