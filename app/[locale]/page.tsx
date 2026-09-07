@@ -18,6 +18,7 @@ import {
   DifferentiatorSection,
   SectorsTeaser,
   WorkTeaser,
+  FeaturedModelSection,
   AeroviewTeaser,
   FastSection,
   HowSection,
@@ -41,6 +42,7 @@ export default function HomePage({
       <DifferentiatorSection />
       <SectorsTeaser />
       <WorkTeaser />
+      <FeaturedModelSection />
       <AeroviewTeaser />
       <FastSection />
       <HowSection />

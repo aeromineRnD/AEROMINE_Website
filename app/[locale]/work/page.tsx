@@ -7,6 +7,8 @@ import { Container } from "@/components/layout/Container";
 import { Reveal } from "@/components/motion/Reveal";
 import { caseStudies } from "@/lib/caseStudies";
 import { pageMetadata } from "@/lib/metadata";
+import { ModelEmbed } from "@/components/three/ModelEmbed";
+import { ModelGallery } from "@/components/three/ModelGallery";
 
 export async function generateMetadata({
   params,
@@ -25,6 +27,7 @@ export default function WorkPage({
   const { locale } = use(params);
   setRequestLocale(locale);
   const t = useTranslations("work");
+  const tModels = useTranslations("models");
 
   return (
     <PageShell title={t("title")} intro={t("intro")}>
@@ -38,6 +41,13 @@ export default function WorkPage({
                 }`}
               >
                 <div className="flex flex-col gap-6">
+                  {"demo" in cs ? (
+                    <ModelEmbed
+                      href={cs.demo}
+                      title={t(`items.${cs.key}.name`)}
+                      poster={cs.images[0]}
+                    />
+                  ) : null}
                   {cs.images.map((img) => (
                     <Image
                       key={img}
@@ -59,6 +69,11 @@ export default function WorkPage({
                   <p className="mt-4 text-lg text-muted">
                     {t(`items.${cs.key}.body`)}
                   </p>
+                  {"demo" in cs ? (
+                    <p className="mt-5 font-bold text-teal">
+                      {tModels("caseStudyPrompt")}
+                    </p>
+                  ) : null}
                 </div>
               </article>
             </Reveal>
@@ -80,6 +95,8 @@ export default function WorkPage({
           </Reveal>
         </Container>
       </section>
+
+      <ModelGallery />
     </PageShell>
   );
 }

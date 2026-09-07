@@ -90,6 +90,11 @@
       "title": "Four sites, one pipeline.",
       "cta": "See the work"
     },
+    "featuredModel": {
+      "title": "This one is real. Open it.",
+      "body": "An open-pit quarry we captured and published as a browser twin. Drag to orbit, scroll to zoom, click the keypoints. Nothing to install, on any device you already own.",
+      "cta": "See every model"
+    },
     "aeroview": {
       "title": "The project your client can actually log into.",
       "body": "Our own platform, built in-house. It closes the distance between the engineer and the client. Upload what you already have, photos, videos or PDFs, and your client sees the project progress in a browser.",
@@ -199,6 +204,46 @@
         "name": "Residential land parcel",
         "type": "Survey · real estate",
         "body": "1:200 topographic plan in WGS 84 with measured parcel area, produced from a single drone flight."
+      }
+    }
+  },
+  "models": {
+    "load": "Load the 3D model",
+    "hint": "Loads on click, so the page stays fast.",
+    "openNewTab": "Open in a new tab",
+    "badgeClient": "Client site",
+    "badgeDemo": "Our own build",
+    "caseStudyPrompt": "The twin is above. Load it and move around the site yourself.",
+    "galleryTitle": "These open in your browser. Right now, on this page.",
+    "galleryLead": "Seven viewers, every one of them written in-house. Some are sites we captured for clients, the rest we built ourselves to show that the pipeline does not care what the subject is. No download, no plugin, no licence.",
+    "items": {
+      "openPit": {
+        "name": "Open pit",
+        "body": "The branded browser twin, with keypoints placed on the model."
+      },
+      "lato": {
+        "name": "Lato quarry",
+        "body": "Photogrammetric capture of a working quarry, with the stockpiles carried as their own geometry."
+      },
+      "realEstate": {
+        "name": "Residential complex",
+        "body": "Exterior model plus per-floor apartment plans: the walkthrough a buyer abroad gets instead of a phone call."
+      },
+      "windTurbines": {
+        "name": "Wind turbines",
+        "body": "Turbine and site model, the shape an inspection capture takes."
+      },
+      "oliveFarm": {
+        "name": "Olive farm",
+        "body": "Parcel and tree canopy captured from the air."
+      },
+      "mallMap": {
+        "name": "Mall map",
+        "body": "Indoor 3D map with wayfinding, the research behind large indoor spaces."
+      },
+      "openOffice": {
+        "name": "Open office",
+        "body": "Interior floor model, built for evacuation-route work."
       }
     }
   },

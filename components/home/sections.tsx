@@ -5,6 +5,8 @@ import { Container } from "@/components/layout/Container";
 import { Reveal } from "@/components/motion/Reveal";
 import { sectors } from "@/lib/sectors";
 import { caseStudies } from "@/lib/caseStudies";
+import { featuredModel } from "@/lib/models";
+import { ModelEmbed } from "@/components/three/ModelEmbed";
 
 type Block = { title: string; body: string };
 type Step = { name: string; body: string };
@@ -205,6 +207,40 @@ export function WorkTeaser() {
           >
             {t("cta")} →
           </Link>
+        </Reveal>
+      </Container>
+    </section>
+  );
+}
+
+// The one section a prospect can act on without reading anything: a real site,
+// live, in the tab they already have open. Loads only when clicked.
+export function FeaturedModelSection() {
+  const t = useTranslations("home.featuredModel");
+  const tModels = useTranslations("models");
+
+  return (
+    <section className="border-t border-hairline-dark bg-ink py-24 text-white md:py-32">
+      <Container className="grid items-center gap-12 md:grid-cols-2">
+        <Reveal>
+          <h2 className="text-3xl font-bold leading-tight md:text-4xl">
+            {t("title")}
+          </h2>
+          <p className="mt-6 text-lg text-muted-on-ink">{t("body")}</p>
+          <Link
+            href="/work"
+            className="mt-8 inline-block font-bold text-aeromine-500 underline decoration-2 underline-offset-4 hover:text-aeromine-400"
+          >
+            {t("cta")} →
+          </Link>
+        </Reveal>
+
+        <Reveal delay={0.15}>
+          <ModelEmbed
+            href={featuredModel.href}
+            title={tModels(`items.${featuredModel.key}.name`)}
+            poster={featuredModel.poster}
+          />
         </Reveal>
       </Container>
     </section>
