@@ -1,6 +1,6 @@
 # Open items
 
-Three things the September 2026 feedback round could not finish in code. Each is
+Things the September 2026 feedback round could not finish in code. Each is
 blocked on a decision or on material from outside the repo, not on engineering
 time. Written down so they do not get lost between here and launch.
 
@@ -86,6 +86,31 @@ load button. It works, but one screenshot per viewer would lift the gallery a
 lot.
 
 ---
+
+## 4. The logo is too small in the header
+
+**Status:** raised after seeing it live. **Blocked on:** a size decision.
+
+The mark is currently 44px in the header and 56px in the footer. Too small: it
+reads as a smudge rather than a logo, and this mark in particular suffers,
+because the wordmark AEROMINE sits *inside* the badge and stops being legible
+well before the propellers do.
+
+Sizes are in `components/layout/Header.tsx` and `components/layout/Footer.tsx`,
+on the `Image` width/height. The asset is vector, so any size is free.
+
+The constraint is the header bar, which is `h-16` (64px). Options:
+
+| Change | Logo | Effect |
+|---|---|---|
+| Size only | 44 → 52px | Fits the current bar with 6px clearance. Better, still not big. |
+| Grow the bar to `h-20` (80px) | 44 → 64px | Noticeably bigger. Costs 16px of vertical space on every page. |
+| Lockup instead of badge | n/a | Mark beside "AEROMINE" set in type. **Do not do this**: the badge already contains the wordmark, so it would read as the name twice (WEBSITE_CONTEXT.md §8). |
+
+Recommended: grow the bar to `h-20` and the logo to around 60px. The header is
+fixed and translucent, so the extra height costs little, and it buys a legible
+wordmark. The hero has `pt-32` clearance already, but check the other pages'
+`PageShell` top padding (`pt-16`) if the bar grows.
 
 ## Not doing
 
