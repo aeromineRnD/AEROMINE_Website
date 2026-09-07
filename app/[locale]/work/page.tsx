@@ -19,6 +19,25 @@ export async function generateMetadata({
   return pageMetadata(locale, "/work", "work");
 }
 
+function Row({ label, value }: { label: string; value: string }) {
+  return (
+    <div>
+      <dt className="text-sm font-bold uppercase tracking-widest text-muted">
+        {label}
+      </dt>
+      <dd className="mt-2">{value}</dd>
+    </div>
+  );
+}
+
+// `facts` carries only figures we can source: the parcel's scale and datum are
+// on the drawing. Everything else stays empty until the founders supply real
+// numbers. WEBSITE_CONTEXT.md 13 forbids estimating them, so the chips simply
+// do not render rather than being filled with something plausible.
+function facts(t: ReturnType<typeof useTranslations>, key: string) {
+  return t.raw(`items.${key}.facts`) as string[];
+}
+
 export default function WorkPage({
   params,
 }: {
@@ -66,11 +85,64 @@ export default function WorkPage({
                   <h2 className="mt-2 text-2xl font-bold md:text-3xl">
                     {t(`items.${cs.key}.name`)}
                   </h2>
-                  <p className="mt-4 text-lg text-muted">
-                    {t(`items.${cs.key}.body`)}
+
+                  <p className="mt-5 text-sm font-bold uppercase tracking-widest text-muted">
+                    {t("labels.challenge")}
                   </p>
+                  <p className="mt-2 text-lg text-muted">
+                    {t(`items.${cs.key}.challenge`)}
+                  </p>
+
+                  <dl className="mt-7 flex flex-col gap-5 border-t border-hairline pt-7">
+                    <Row
+                      label={t("labels.capture")}
+                      value={t(`items.${cs.key}.capture`)}
+                    />
+                    <Row
+                      label={t("labels.processing")}
+                      value={t(`items.${cs.key}.processing`)}
+                    />
+                    <div>
+                      <dt className="text-sm font-bold uppercase tracking-widest text-muted">
+                        {t("labels.deliverables")}
+                      </dt>
+                      <dd className="mt-2">
+                        <ul className="flex flex-col gap-1.5">
+                          {(
+                            t.raw(`items.${cs.key}.deliverables`) as string[]
+                          ).map((d) => (
+                            <li key={d} className="flex items-start gap-2.5">
+                              <span
+                                className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-aeromine-600"
+                                aria-hidden
+                              />
+                              {d}
+                            </li>
+                          ))}
+                        </ul>
+                      </dd>
+                    </div>
+                    <Row
+                      label={t("labels.applications")}
+                      value={t(`items.${cs.key}.applications`)}
+                    />
+                  </dl>
+
+                  {facts(t, cs.key).length > 0 && (
+                    <div className="mt-7 flex flex-wrap gap-2">
+                      {facts(t, cs.key).map((f) => (
+                        <span
+                          key={f}
+                          className="rounded-full border border-hairline bg-paper px-3.5 py-1.5 text-sm font-medium text-teal"
+                        >
+                          {f}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+
                   {"demo" in cs ? (
-                    <p className="mt-5 font-bold text-teal">
+                    <p className="mt-7 font-bold text-teal">
                       {tModels("caseStudyPrompt")}
                     </p>
                   ) : null}

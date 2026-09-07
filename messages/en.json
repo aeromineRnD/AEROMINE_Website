@@ -397,26 +397,75 @@
     "title": "Four sites, one pipeline.",
     "intro": "Real projects, named and shown. Every deliverable below opened in a browser or a CAD tool the client already had.",
     "accuracy": "A 12.1 m span measured off the model, checked against a physical scale bar.",
+    "labels": {
+      "challenge": "The problem",
+      "capture": "Capture",
+      "processing": "Processing",
+      "deliverables": "Deliverables",
+      "applications": "Used for",
+      "facts": "On record"
+    },
     "items": {
       "veikou": {
         "name": "Alsos Veikou Theater",
         "type": "Theatre · full 3D capture",
-        "body": "Full photogrammetric capture and processing of the open-air theatre: orthophoto, textured mesh and point cloud."
+        "challenge": "Document the open-air theatre as it stands, completely enough that architectural work could be planned against it.",
+        "capture": "RTK drone photogrammetry over the full structure and its surroundings.",
+        "processing": "Photogrammetric reconstruction to a dense cloud, then a textured mesh.",
+        "deliverables": [
+          "Orthophoto of the theatre",
+          "Dense point cloud",
+          "Textured 3D mesh"
+        ],
+        "applications": "Existing-condition documentation and architectural planning.",
+        "facts": []
       },
       "quarry": {
         "name": "Open-pit quarry",
         "type": "Extraction · volumes",
-        "body": "Site captured and published as a browser twin with keypoints, supporting stockpile volumes and terrain modelling."
+        "challenge": "Give a working pit a measurable record of its stockpiles and terrain, in a form the site could keep opening without specialist software.",
+        "capture": "Drone flight over the full pit and the stockpile areas.",
+        "processing": "Photogrammetric reconstruction, then terrain modelling and volume computation on the resulting surface.",
+        "deliverables": [
+          "Browser twin with keypoints",
+          "Dense point cloud",
+          "Digital terrain model",
+          "Stockpile volumes"
+        ],
+        "applications": "Stockpile measurement, terrain modelling, and comparison between captures.",
+        "facts": []
       },
       "monastery": {
         "name": "Monastery complex",
         "type": "Heritage · documentation",
-        "body": "Point-cloud elevations of a historic complex, delivered as .dwg for the restoration team's existing CAD workflow."
+        "challenge": "The restoration team needed elevations of a historic complex inside the CAD workflow they already had, not in a format they would have to learn.",
+        "capture": "Drone capture of the complex, planned around the elevations that had to be drawn.",
+        "processing": "Point-cloud reconstruction, then elevations extracted from the cloud.",
+        "deliverables": [
+          "Point-cloud elevations",
+          "Delivered as .dwg",
+          "Model views of the complex"
+        ],
+        "applications": "Restoration planning and heritage documentation.",
+        "facts": []
       },
       "parcel": {
         "name": "Residential land parcel",
         "type": "Survey · real estate",
-        "body": "1:200 topographic plan in WGS 84 with measured parcel area, produced from a single drone flight."
+        "challenge": "Produce a measured topographic plan of a residential land parcel, from a single visit.",
+        "capture": "One drone flight over the parcel and its boundaries.",
+        "processing": "Photogrammetric processing, georeferenced to WGS 84.",
+        "deliverables": [
+          "1:200 topographic plan",
+          "Measured parcel area",
+          "Georeferenced in WGS 84"
+        ],
+        "applications": "Land transactions and planning.",
+        "facts": [
+          "Scale 1:200",
+          "WGS 84",
+          "One flight"
+        ]
       }
     }
   },
