@@ -69,6 +69,7 @@ export default function AeroviewOsPage({
                     alt={(t.raw("screenshotAlts") as string[])[i]}
                     width={720}
                     height={440}
+                    sizes="(min-width: 1280px) 580px, (min-width: 640px) 50vw, 100vw"
                     className="w-full rounded"
                   />
                 </div>

@@ -283,6 +283,7 @@ export function WorkTeaser() {
                     alt={tWork(`items.${cs.key}.name`)}
                     width={720}
                     height={480}
+                    sizes="(min-width: 1280px) 580px, (min-width: 640px) 50vw, 100vw"
                     className="aspect-[3/2] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                   />
                 </div>
@@ -370,6 +371,7 @@ export function AeroviewTeaser() {
               alt={t("imageAlt")}
               width={720}
               height={420}
+              sizes="(min-width: 1280px) 580px, (min-width: 768px) 50vw, 100vw"
               className="w-full rounded"
             />
           </div>

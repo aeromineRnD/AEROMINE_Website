@@ -76,6 +76,7 @@ export default function WorkPage({
                       }
                       width={880}
                       height={560}
+                      sizes="(min-width: 1280px) 600px, (min-width: 768px) 50vw, 100vw"
                       className="w-full rounded-lg border border-hairline"
                     />
                   ))}
@@ -160,6 +161,7 @@ export default function WorkPage({
                 alt={t("accuracyAlt")}
                 width={720}
                 height={460}
+                sizes="(min-width: 1280px) 560px, (min-width: 768px) 50vw, 100vw"
                 className="w-full rounded"
               />
               <p className="text-xl font-medium leading-snug text-aeromine-500 md:text-2xl">
