@@ -1,6 +1,14 @@
 // Single source of truth for the canonical origin and company facts.
 // Consumed by metadata, sitemap, robots, llms.txt and JSON-LD — change here only.
-export const SITE_URL = "https://aeromine.info";
+//
+// www, not the apex: aeromine.gr 308-redirects to www.aeromine.gr, so www is
+// the address that actually serves. No trailing slash, consumers concatenate
+// paths onto this directly.
+//
+// NOT aeromine.info. That domain is the old Wix site on separate hosting and is
+// being taken down; pointing canonicals at it would tell every crawler to index
+// a page that is about to die.
+export const SITE_URL = "https://www.aeromine.gr";
 
 export const COMPANY = {
   name: "Aeromine",

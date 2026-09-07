@@ -1,6 +1,6 @@
 # Aeromine website: build context
 
-Everything a coding agent needs to build the new **aeromine.info**. Self-contained: nothing here
+Everything a coding agent needs to build the new **www.aeromine.gr**. Self-contained: nothing here
 depends on a conversation you were not part of.
 
 **Build decisions already made:** one site, with AeroVIEW OS as a product section (not a separate
@@ -578,7 +578,7 @@ deck was built to this rule and it is why every figure on it survives a follow-u
 | Email | `jbrintakis@aeromine.org` |
 | Phone | `+30 698 137 5791` |
 | Address | Polytexneiou 6, Athens, 10433 |
-| Web | `aeromine.info` |
+| Web | `www.aeromine.gr` |
 | Code | `github.com/aeromineRnD` |
 
 ---

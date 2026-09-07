@@ -1,4 +1,4 @@
-# Aeromine — aeromine.info
+# Aeromine — www.aeromine.gr
 
 Marketing site for Aeromine: drone capture, photogrammetry, and browser-based
 digital twins. Athens, Greece.
