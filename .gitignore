@@ -40,3 +40,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local agent settings
+.claude/
+
+# Source feedback from colleagues (docx, PDF audit, working notes). Kept out of
+# the repo deliberately: the decisions taken from it live in TODO.md and in the
+# commit messages, which is what anyone reading this repo needs.
+/FEEDBACK_FROM_COLLEAGUES/
