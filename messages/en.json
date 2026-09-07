@@ -110,7 +110,8 @@
     "aeroview": {
       "title": "The project your client can actually log into.",
       "body": "Our own platform, built in-house. It closes the distance between the engineer and the client. Upload what you already have, photos, videos or PDFs, and your client sees the project progress in a browser.",
-      "cta": "More about AeroVIEW OS"
+      "cta": "More about AeroVIEW OS",
+      "imageAlt": "AeroVIEW OS phase selector, showing a capture title and its date"
     },
     "fast": {
       "title": "We own every step, so custom is cheap.",
@@ -424,7 +425,11 @@
           "Textured 3D mesh"
         ],
         "applications": "Existing-condition documentation and architectural planning.",
-        "facts": []
+        "facts": [],
+        "imageAlts": [
+          "Top-down orthophoto of Alsos Veikou Theater",
+          "The theatre as a textured 3D mesh in Agisoft Metashape"
+        ]
       },
       "quarry": {
         "name": "Open-pit quarry",
@@ -439,7 +444,11 @@
           "Stockpile volumes"
         ],
         "applications": "Stockpile measurement, terrain modelling, and comparison between captures.",
-        "facts": []
+        "facts": [],
+        "imageAlts": [
+          "Browser twin of the open-pit quarry, with keypoints on the model",
+          "Point cloud of the quarry site, perspective view"
+        ]
       },
       "monastery": {
         "name": "Monastery complex",
@@ -453,7 +462,11 @@
           "Model views of the complex"
         ],
         "applications": "Restoration planning and heritage documentation.",
-        "facts": []
+        "facts": [],
+        "imageAlts": [
+          "Point-cloud elevations of the monastery complex, delivered as .dwg",
+          "Three model views of the monastery complex"
+        ]
       },
       "parcel": {
         "name": "Residential land parcel",
@@ -471,9 +484,13 @@
           "Scale 1:200",
           "WGS 84",
           "One flight"
+        ],
+        "imageAlts": [
+          "1:200 topographic plan of the parcel in WGS 84, with the measured boundary"
         ]
       }
-    }
+    },
+    "accuracyAlt": "A 12.1 m span measured on the model, next to a physical scale bar on site"
   },
   "models": {
     "load": "Load the 3D model",
@@ -552,7 +569,13 @@
         "Explore the live 3D models, 360° tours and photo galleries, inside and out.",
         "Follow stage progress, milestones and materials, and message the company directly, all in one place."
       ]
-    }
+    },
+    "screenshotAlts": [
+      "Phase selector strip showing the capture title and date",
+      "Per-stage progress chart",
+      "Overall completion bar with start and target dates",
+      "Milestones panel"
+    ]
   },
   "contact": {
     "title": "Send us one site.",

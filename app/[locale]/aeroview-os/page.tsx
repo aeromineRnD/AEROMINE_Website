@@ -59,14 +59,14 @@ export default function AeroviewOsPage({
 
           <Reveal>
             <div className="grid gap-4 sm:grid-cols-2">
-              {screenshots.map((s) => (
+              {screenshots.map((s, i) => (
                 <div
                   key={s}
                   className="rounded-lg border border-hairline bg-white p-3"
                 >
                   <Image
                     src={s}
-                    alt="AeroVIEW OS"
+                    alt={(t.raw("screenshotAlts") as string[])[i]}
                     width={720}
                     height={440}
                     className="w-full rounded"

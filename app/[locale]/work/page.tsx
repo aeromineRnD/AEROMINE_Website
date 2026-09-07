@@ -67,11 +67,13 @@ export default function WorkPage({
                       poster={cs.images[0]}
                     />
                   ) : null}
-                  {cs.images.map((img) => (
+                  {cs.images.map((img, n) => (
                     <Image
                       key={img}
                       src={img}
-                      alt={t(`items.${cs.key}.name`)}
+                      alt={
+                        (t.raw(`items.${cs.key}.imageAlts`) as string[])[n]
+                      }
                       width={880}
                       height={560}
                       className="w-full rounded-lg border border-hairline"
@@ -155,7 +157,7 @@ export default function WorkPage({
             <aside className="grid items-center gap-8 rounded-lg bg-ink p-8 text-white md:grid-cols-2 md:p-12">
               <Image
                 src="/images/measure_accuracy.png"
-                alt=""
+                alt={t("accuracyAlt")}
                 width={720}
                 height={460}
                 className="w-full rounded"

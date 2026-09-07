@@ -367,7 +367,7 @@ export function AeroviewTeaser() {
           <div className="rounded-lg border border-hairline bg-white p-3 shadow-sm">
             <Image
               src="/images/av_phasebar.png"
-              alt="AeroVIEW OS"
+              alt={t("imageAlt")}
               width={720}
               height={420}
               className="w-full rounded"

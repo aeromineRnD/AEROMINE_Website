@@ -1,6 +1,9 @@
-// The oaka_* filenames are historical; the site is Alsos Veikou Theater,
-// NOT the Panathenaic Stadium (WEBSITE_CONTEXT.md §6). Captions come from
-// messages/*.json; only filenames live here.
+// Filenames are descriptive and name the real site. The theatre files used to
+// be oaka_*, from a draft that misidentified Alsos Veikou Theater as the
+// Panathenaic Stadium (WEBSITE_CONTEXT.md §6); a filename is the one caption
+// nobody proofreads, and it reaches Google image search.
+//
+// Captions and alt text come from messages/*.json; only filenames live here.
 //
 // `demo` is the published browser twin for that project, where one exists. Only
 // the quarry has one today; the other three are shown as imagery until their
@@ -8,7 +11,10 @@
 export const caseStudies = [
   {
     key: "veikou",
-    images: ["/images/oaka_ortho.png", "/images/model_oaka_metashape.png"],
+    images: [
+      "/images/veikou-theater-orthophoto.png",
+      "/images/veikou-theater-mesh.png",
+    ],
   },
   {
     key: "quarry",
