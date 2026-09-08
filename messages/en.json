@@ -17,10 +17,10 @@
     "cta": "Send us one site"
   },
   "consent": {
-    "label": "Cookie choice",
-    "body": "We use one Google Analytics cookie, to see how many people visit and which pages they read. Nothing else, and no advertising. Say no and the site works exactly the same.",
+    "label": "Cookies",
+    "body": "We use cookies to analyse traffic and improve your experience.",
     "accept": "Accept",
-    "decline": "No thanks"
+    "decline": "Decline"
   },
   "home": {
     "hero": {
