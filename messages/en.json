@@ -117,7 +117,7 @@
       "title": "The project your client can actually log into.",
       "body": "Our own platform, built in-house. It closes the distance between the engineer and the client. Upload what you already have, photos, videos or PDFs, and your client sees the project progress in a browser.",
       "cta": "More about AeroVIEW OS",
-      "imageAlt": "AeroVIEW OS phase selector, showing a capture title and its date"
+      "imageAlt": "An AeroVIEW OS dashboard as the client sees it, with progress per project"
     },
     "fast": {
       "title": "We own every step. That is why custom is simple, not expensive.",
@@ -577,10 +577,9 @@
       ]
     },
     "screenshotAlts": [
-      "Phase selector strip showing the capture title and date",
-      "Per-stage progress chart",
-      "Overall completion bar with start and target dates",
-      "Milestones panel"
+      "A client's AeroVIEW OS dashboard: project count, average progress, and each project with its own completion bar",
+      "The client's project list, four builds with location, progress and estimated completion",
+      "A phase inside a project: the 3D model of the build, with the phase selector and the drone capture date above it"
     ]
   },
   "contact": {

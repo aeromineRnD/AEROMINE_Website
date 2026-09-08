@@ -367,10 +367,10 @@ export function AeroviewTeaser() {
         <Reveal delay={0.15}>
           <div className="rounded-lg border border-hairline bg-white p-3 shadow-sm">
             <Image
-              src="/images/av_phasebar.png"
+              src="/images/av-client-dashboard.png"
               alt={t("imageAlt")}
-              width={720}
-              height={420}
+              width={1843}
+              height={613}
               sizes="(min-width: 1280px) 580px, (min-width: 768px) 50vw, 100vw"
               className="w-full rounded"
             />

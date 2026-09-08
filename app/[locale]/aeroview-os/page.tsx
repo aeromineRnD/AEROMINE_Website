@@ -18,11 +18,16 @@ export async function generateMetadata({
   return pageMetadata(locale, "/aeroview-os", "aeroviewOs");
 }
 
+// Real pixel dimensions, not a shared guess. next/image derives the aspect
+// ratio from these, and a wrong pair squashes the image rather than letting it
+// scale, because the default object-fit is `fill`.
+//
+// The dashboard leads at full width: it is the product promise in one picture,
+// the thing a client sees after logging in. The other two sit beside each other.
 const screenshots = [
-  "/images/av_phasebar.png",
-  "/images/av_stages.png",
-  "/images/av_completion.png",
-  "/images/av_milestones.png",
+  { src: "/images/av-client-dashboard.png", width: 1843, height: 613 },
+  { src: "/images/av-client-projects.png", width: 1843, height: 830 },
+  { src: "/images/av-phase-3d-model.png", width: 1591, height: 556 },
 ];
 
 export default function AeroviewOsPage({
@@ -61,15 +66,21 @@ export default function AeroviewOsPage({
             <div className="grid gap-4 sm:grid-cols-2">
               {screenshots.map((s, i) => (
                 <div
-                  key={s}
-                  className="rounded-lg border border-hairline bg-white p-3"
+                  key={s.src}
+                  className={`rounded-lg border border-hairline bg-white p-3 ${
+                    i === 0 ? "sm:col-span-2" : ""
+                  }`}
                 >
                   <Image
-                    src={s}
+                    src={s.src}
                     alt={(t.raw("screenshotAlts") as string[])[i]}
-                    width={720}
-                    height={440}
-                    sizes="(min-width: 1280px) 580px, (min-width: 640px) 50vw, 100vw"
+                    width={s.width}
+                    height={s.height}
+                    sizes={
+                      i === 0
+                        ? "(min-width: 1280px) 1160px, 100vw"
+                        : "(min-width: 1280px) 580px, (min-width: 640px) 50vw, 100vw"
+                    }
                     className="w-full rounded"
                   />
                 </div>
