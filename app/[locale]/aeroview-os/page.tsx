@@ -28,7 +28,7 @@ export async function generateMetadata({
 const screenshots = [
   { src: "/images/av-client-dashboard.png", width: 1843, height: 613, wide: true },
   { src: "/images/av-phase-drone-capture.png", width: 1268, height: 546, wide: true },
-  { src: "/images/av-client-projects.png", width: 1843, height: 830, wide: false },
+  { src: "/images/av-stage-progress.png", width: 1064, height: 694, wide: false },
   { src: "/images/av-phase-3d-model.png", width: 1591, height: 556, wide: false },
 ];
 
