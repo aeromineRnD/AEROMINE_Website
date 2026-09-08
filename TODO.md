@@ -59,15 +59,33 @@ Before the old site is switched off:
 **Status:** slots exist in the code and render nothing while empty.
 **Blocked on:** material from the founders.
 
-**Clean AeroVIEW OS screenshots.** The current crops show progress bars at or
-near 100%, which reads as staged. Nikos asked for bars at realistic values with
-specific insights visible. The seed data has to be cleaned first: the raw
-screenshots contain projects named `test`, `test2`, `This is the final e2e test`
-and a fake user `Stavros Papadopoulos` (WEBSITE_CONTEXT.md §11). Replace the
-four files in `public/images/av_*.png`.
+**AeroVIEW OS screenshots: three done, two to re-shoot.** The dashboard, the
+project list and the 3D phase view are live. Two more are needed.
 
-**360° stills or a short video.** Nothing on the site currently shows the 360°
-product, which is one of the three things we sell.
+*Stage progress.* The supplied shot cannot be published: the ladder is
+impossible. Final Inspection, Painting, External Works and Fixtures all read
+100% while Plumbing sits at 20% and Insulation at 10%. Nobody paints before
+plastering, and any engineer looking at our site spots it in two seconds. Set a
+coherent mid-build ladder before re-shooting, for example:
+
+    Foundation 100 · Structural Frame 100 · Roofing 80 · Masonry 60
+    Plumbing 40 · Electrical 35 · Insulation 10 · everything below 0
+
+That also gives the chart the shape it should have: solid green at the top,
+part-filled through the middle, empty at the bottom. Same shot needs the update
+feed cleaned, it currently credits `Stavros Papadopoulos` three times, and the
+milestone literally named "final / bla bla bal" removed.
+
+*360° walkthrough.* The supplied one is watermarked **3DLabz Animation Studio /
+www.3dlabz.com**. It cannot go on aeromine.gr: publishing another studio's
+work on our own marketing site presents it as ours. Needs a 360 from one of our
+own captures. This is still the only one of the three things we sell that has
+no picture anywhere on the site.
+
+*Small fixes worth making in the same pass:* the project is called
+`Vila "Viena"`, which should be `Villa`; "Kifisia Residence" shows 100% while
+still tagged In Progress; and the dashboard's "Recent Activity" panel is empty,
+so a couple of entries there would make the shot fuller.
 
 **Real project figures.** `messages/*.json` carries a `facts` array per case
 study. Only the parcel is filled, with its scale and datum, because those are on
