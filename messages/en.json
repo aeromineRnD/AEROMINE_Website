@@ -16,6 +16,12 @@
     "github": "github.com/aeromineRnD",
     "cta": "Send us one site"
   },
+  "consent": {
+    "label": "Cookie choice",
+    "body": "We use one Google Analytics cookie, to see how many people visit and which pages they read. Nothing else, and no advertising. Say no and the site works exactly the same.",
+    "accept": "Accept",
+    "decline": "No thanks"
+  },
   "home": {
     "hero": {
       "headline": "We turn real places into measurable digital twins.",

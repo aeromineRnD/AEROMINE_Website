@@ -6,30 +6,29 @@ time. Written down so they do not get lost between here and launch.
 
 ---
 
-## 1. Consent banner: GA4 currently records nothing
+## 1. Turn GA4 on: two things left
 
-**Status:** shipped, deliberately inert. **Blocked on:** a decision.
+**Status:** banner built and wired. **Blocked on:** a Vercel setting, and a
+policy page.
 
-`components/analytics/Analytics.tsx` sets Consent Mode v2 to `denied` for all
-four storage types. There is no consent banner on the site, so nothing ever
-flips it to granted and GA4 collects no data at all.
+Decided 2026-09-08: consent banner plus full GA4, rather than cookieless
+analytics. `ConsentBanner` asks once, remembers the answer, and grants
+`analytics_storage` only on accept. `ad_*` stay denied permanently, since we
+run no advertising.
 
-This is not an oversight. A Greek company cannot drop an analytics cookie on an
-EU visitor without asking first, and adding a banner is a visible, site-wide
-change that is a founders' decision rather than an engineering one.
+**a. Set `NEXT_PUBLIC_GA_ID` in Vercel and redeploy.** The banner and the tag
+both stay hidden until this exists. It is a `NEXT_PUBLIC_` value, so it is
+inlined at build time: adding the variable is not enough on its own, the
+project has to build again afterwards.
 
-Three ways out:
+**b. A privacy or cookie policy page.** The banner explains in one sentence
+what the cookie does, which is honest but thin. The normal companion is a short
+page describing what is collected and how to withdraw consent, linked from the
+banner and the footer. Not written, because it is a legal document and should
+not be invented: worth twenty minutes from whoever handles the company's terms.
 
-| Option | Cost | Result |
-|---|---|---|
-| Add a consent banner | Small UI job | GA4 works fully after consent. Clean legally. |
-| Swap to Vercel Analytics | Small config job | Cookieless, no banner needed, but no Google reports |
-| Leave it denied | Nothing | Search Console still works; GA4 stays empty |
-
-Flipping it on later is one `gtag('consent','update',...)` call.
-
-Note: `NEXT_PUBLIC_GA_ID` is inlined at build time, so setting it in Vercel
-needs a redeploy, not just an environment variable.
+Once someone has answered, the banner never returns. Clearing it for testing:
+`localStorage.removeItem('aeromine-consent')`.
 
 ---
 

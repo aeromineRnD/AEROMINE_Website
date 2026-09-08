@@ -7,10 +7,16 @@ import Script from "next/script";
 //
 // Consent Mode v2 defaults are declared BEFORE the gtag config runs, which is
 // the only ordering Google honours. `analytics_storage` starts denied, so no
-// cookie is written until something calls gtag('consent','update',...). There
-// is no consent banner on the site yet, so today this collects nothing: see
-// the note in .env.example. Shipping it the other way round would have put a
-// cookie on every EU visitor without asking.
+// cookie is written until the visitor accepts in ConsentBanner.
+//
+// A returning visitor who already accepted has their choice applied here, in
+// the same script and before config, so their first pageview of the session is
+// recorded rather than lost. localStorage is wrapped in try/catch: it throws
+// outright in some privacy modes.
+//
+// ad_* stay denied permanently. We run no advertising, so there is nothing to
+// ask for and nothing the banner can grant.
+export const CONSENT_KEY = "aeromine-consent";
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
 export function Analytics() {
@@ -25,6 +31,7 @@ export function Analytics() {
     <Script id="ga-init" strategy="afterInteractive">
       {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
 gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});
+try{if(localStorage.getItem('${CONSENT_KEY}')==='granted'){gtag('consent','update',{analytics_storage:'granted'});}}catch(e){}
 gtag('js',new Date());
 gtag('config','${GA_ID}');
 var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=${GA_ID}';document.head.appendChild(s);`}

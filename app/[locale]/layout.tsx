@@ -10,6 +10,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MotionProvider } from "@/components/motion/MotionProvider";
 import { Analytics } from "@/components/analytics/Analytics";
+import { ConsentBanner } from "@/components/analytics/ConsentBanner";
 import "../globals.css";
 
 const manrope = Manrope({
@@ -82,6 +83,7 @@ export default async function LocaleLayout({
             <Header />
             {children}
             <Footer />
+            <ConsentBanner />
           </MotionProvider>
         </NextIntlClientProvider>
       </body>
