@@ -378,10 +378,27 @@ sections explicitly.
 
 ### Logo
 
-`deck/assets/logo_ink.png`, `logo_white.png`, `logo_gold.png`: the drone-propeller mark with
-"AEROMINE" inside it. **The logo already contains the wordmark.** Do not set "AEROMINE" in type
-beside it; that reads as the name twice. There is no SVG. Getting one vectorised is worth doing
-before the site ships, since the PNG is 321×320 and will not scale for a hero or a retina header.
+The drone-propeller mark with "AEROMINE" inside it. Master is
+`Website/LOGO/transparent asset 2.png`, the designer's transparent export; `public/brand/*.png`
+are 512×512 recolours derived from it, and `public/brand/*.svg` are a vector trace of the same
+artwork, one file per colour because an `<img>` cannot inherit `currentColor`.
+
+⚠️ **The "do not set AEROMINE in type beside the mark" rule was overturned on 2026-09-08**, by the
+founders, deliberately. The reasoning against it was sound in the abstract: the badge contains the
+wordmark, so repeating it reads as the name twice. In practice the inner wordmark is illegible at
+any size a header can carry, because it sits inside the badge and dies long before the propellers
+do. So the site now uses a lockup: gold mark plus "AEROMINE" set in Manrope beside it. The mark
+carries `alt=""` there, so a screen reader hears the name once.
+
+**Still true:** on any surface where the mark appears large enough for its inner wordmark to read,
+do not add type beside it.
+
+Gold mark on ink only. The Organization schema logo stays `logo_ink.png`, because Google renders
+that one on a white card where gold fails (see the gold-on-white trap above).
+
+**Still missing: a real SVG from the designer.** The delivered set is raster only, and the master
+holds just 335×335 of actual artwork. The traced SVG is good enough today, but a proper vector
+would let every asset come from one source.
 
 ### Type
 

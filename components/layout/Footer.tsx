@@ -23,12 +23,19 @@ export function Footer() {
     <footer className="bg-ink text-muted-on-ink">
       <Container className="grid gap-10 py-16 md:grid-cols-3">
         <div className="flex flex-col gap-4">
-          <Image
-            src="/brand/logo_gold.svg"
-            alt="Aeromine"
-            width={56}
-            height={56}
-          />
+          <div className="flex items-center gap-3">
+            {/* Same reasoning as the header: the wordmark beside it is text. */}
+            <Image
+              src="/brand/logo_gold.svg"
+              alt=""
+              width={72}
+              height={72}
+              className="h-16 w-16"
+            />
+            <span className="text-xl font-bold uppercase tracking-[0.16em] text-white">
+              Aeromine
+            </span>
+          </div>
           <p className="text-sm">{t("companyLine")}</p>
         </div>
 

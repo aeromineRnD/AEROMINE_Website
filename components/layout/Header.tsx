@@ -26,15 +26,26 @@ export function Header() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-hairline-dark bg-ink/90 backdrop-blur">
-      <Container className="flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
+      <Container className="flex h-20 items-center justify-between">
+        <Link
+          href="/"
+          className="flex items-center gap-3"
+          onClick={() => setOpen(false)}
+        >
+          {/* alt="" on purpose: the wordmark beside it is real text, so the
+              link already has an accessible name. Giving the image one too
+              would have a screen reader announce "Aeromine Aeromine". */}
           <Image
             src="/brand/logo_gold.svg"
-            alt="Aeromine"
-            width={44}
-            height={44}
+            alt=""
+            width={64}
+            height={64}
             priority
+            className="h-12 w-12 md:h-16 md:w-16"
           />
+          <span className="text-lg font-bold uppercase tracking-[0.16em] text-white md:text-xl">
+            Aeromine
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-7 md:flex">
