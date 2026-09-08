@@ -22,12 +22,14 @@ export async function generateMetadata({
 // ratio from these, and a wrong pair squashes the image rather than letting it
 // scale, because the default object-fit is `fill`.
 //
-// The dashboard leads at full width: it is the product promise in one picture,
-// the thing a client sees after logging in. The other two sit beside each other.
+// The first two run full width and carry the argument: what a client sees after
+// logging in, then a real drone capture sitting in the platform as a dated
+// phase. The other two sit beside each other underneath.
 const screenshots = [
-  { src: "/images/av-client-dashboard.png", width: 1843, height: 613 },
-  { src: "/images/av-client-projects.png", width: 1843, height: 830 },
-  { src: "/images/av-phase-3d-model.png", width: 1591, height: 556 },
+  { src: "/images/av-client-dashboard.png", width: 1843, height: 613, wide: true },
+  { src: "/images/av-phase-drone-capture.png", width: 1268, height: 546, wide: true },
+  { src: "/images/av-client-projects.png", width: 1843, height: 830, wide: false },
+  { src: "/images/av-phase-3d-model.png", width: 1591, height: 556, wide: false },
 ];
 
 export default function AeroviewOsPage({
@@ -68,7 +70,7 @@ export default function AeroviewOsPage({
                 <div
                   key={s.src}
                   className={`rounded-lg border border-hairline bg-white p-3 ${
-                    i === 0 ? "sm:col-span-2" : ""
+                    s.wide ? "sm:col-span-2" : ""
                   }`}
                 >
                   <Image
@@ -77,7 +79,7 @@ export default function AeroviewOsPage({
                     width={s.width}
                     height={s.height}
                     sizes={
-                      i === 0
+                      s.wide
                         ? "(min-width: 1280px) 1160px, 100vw"
                         : "(min-width: 1280px) 580px, (min-width: 640px) 50vw, 100vw"
                     }

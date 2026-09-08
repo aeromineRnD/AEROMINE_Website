@@ -578,8 +578,9 @@
     },
     "screenshotAlts": [
       "A client's AeroVIEW OS dashboard: project count, average progress, and each project with its own completion bar",
+      "A drone capture published as a dated phase inside AeroVIEW OS: the 3D model of a stone house, with the phase selector above it",
       "The client's project list, four builds with location, progress and estimated completion",
-      "A phase inside a project: the 3D model of the build, with the phase selector and the drone capture date above it"
+      "The interior view of a build's 3D model, switched from the exterior with one control"
     ]
   },
   "contact": {
