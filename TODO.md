@@ -59,20 +59,11 @@ Before the old site is switched off:
 **Status:** slots exist in the code and render nothing while empty.
 **Blocked on:** material from the founders.
 
-**AeroVIEW OS screenshots: four live, two still owed.** The client dashboard,
-the Kato Tithorea drone capture as a phase, the project list and the interior
-model view are all published.
-
-*Stage progress.* Second attempt fixed most of the ladder, and underfloor
-heating at 100% ahead of tiling at 50% is correct, since it goes underneath.
-One value still blocks it:
-
-    Plastering 100%  while  Electrical rough-in 70%
-
-Conduit goes into the wall before the plaster does. Set electrical to 100 and
-re-shoot; it is one field in the same form the screenshot shows. Worth also
-looking at the header while there: the project reads 82% complete with a start
-date five weeks ago and a two-year target.
+**AeroVIEW OS screenshots: done, except the 360.** Four are published: the
+client dashboard, the Kato Tithorea drone capture as a phase, the stage
+progress panel and the interior model view. The client project list was
+dropped as a near-duplicate of the dashboard; the file is in git history if
+anyone wants it back.
 
 *360° walkthrough.* Still nothing. The first attempt was watermarked by another
 studio (3DLabz) and could not be used; the second turned out to be a
