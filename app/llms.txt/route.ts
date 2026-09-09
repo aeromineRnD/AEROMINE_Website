@@ -8,7 +8,7 @@ import el from "@/messages/el.json";
 const serviceLines = services
   .map((s) => {
     const item = el.services.items[s.key as keyof typeof el.services.items];
-    return `- ${item.name}: ${SITE_URL}${servicePath("el", s)}`;
+    return `- [${item.name}](${SITE_URL}${servicePath("el", s)})`;
   })
   .join("\n");
 
@@ -24,7 +24,7 @@ const body = `# Aeromine
 > Based in Athens, working all over Greece, with projects in the EU and
 > beyond welcome.
 
-Primary language: Greek (${SITE_URL}/el). English: ${SITE_URL}/en.
+Primary language: Greek. [Greek site](${SITE_URL}/el) · [English site](${SITE_URL}/en).
 
 ## What we do
 
@@ -46,13 +46,13 @@ Everything is in-house: the flights, the photogrammetry processing, and the
 
 ${serviceLines}
 
-All services: ${SITE_URL}/el/services
+All services: [Services](${SITE_URL}/el/services)
 
 ## Sectors
 
 Construction and residential, quarries and extraction, heritage and
 archaeology, real estate, wind and energy assets, agriculture and land,
-large indoor spaces. Details: ${SITE_URL}/el/sectors
+large indoor spaces. Details: [Sectors](${SITE_URL}/el/sectors)
 
 ## Delivered work (case studies)
 
@@ -66,7 +66,7 @@ large indoor spaces. Details: ${SITE_URL}/el/sectors
 - Land parcel: 1:200 survey diagram in WGS 84 with measured area, from a
   single drone flight.
 
-Details: ${SITE_URL}/el/work
+Details: [Work](${SITE_URL}/el/work)
 
 ## AeroVIEW OS
 
@@ -75,26 +75,26 @@ each client a login; the client sees stage-by-stage progress percentages,
 media updates, milestones and materials, and each drone capture as a phase
 with 3D models and 360° tours, all in the browser. Stages are modular: a full
 build or a small renovation. Bilingual Greek/English.
-Details: ${SITE_URL}/el/aeroview-os
+Details: [AeroVIEW OS](${SITE_URL}/el/aeroview-os)
 
 ## Live in-house 3D demos
 
-- Lato quarry viewer: https://aeromine-3d-lato.vercel.app/
-- Open pit stockpiles: https://aeromine-3d-open-pit.vercel.app/
-- Real estate viewer: https://aeromine-3d-real-estate.vercel.app/
-- Wind turbines: https://aeromine-3d-wind-turbines.vercel.app/
-- Olive farm: https://aeromine-3-d-olive-trees-farm.vercel.app/
-- Mall map: https://aeromine-3d-mall-map.vercel.app/
-- Open office facility map: https://aeromine-3d-open-office.vercel.app/
+- [Lato quarry viewer](https://aeromine-3d-lato.vercel.app/)
+- [Open pit stockpiles](https://aeromine-3d-open-pit.vercel.app/)
+- [Real estate viewer](https://aeromine-3d-real-estate.vercel.app/)
+- [Wind turbines](https://aeromine-3d-wind-turbines.vercel.app/)
+- [Olive farm](https://aeromine-3-d-olive-trees-farm.vercel.app/)
+- [Mall map](https://aeromine-3d-mall-map.vercel.app/)
+- [Open office facility map](https://aeromine-3d-open-office.vercel.app/)
 
 ## Contact
 
 - Email: ${COMPANY.email}
 - Phone: ${COMPANY.phone}
 - Address: ${COMPANY.address.streetAddress}, ${COMPANY.address.addressLocality} ${COMPANY.address.postalCode}, Greece
-- LinkedIn: ${COMPANY.linkedin}
-- GitHub: ${COMPANY.github}
-- FAQ: ${SITE_URL}/el/faq
+- [LinkedIn](${COMPANY.linkedin})
+- [GitHub](${COMPANY.github})
+- [FAQ](${SITE_URL}/el/faq)
 `;
 
 export function GET() {
