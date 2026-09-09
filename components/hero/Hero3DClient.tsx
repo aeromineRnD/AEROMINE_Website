@@ -1,55 +1,65 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { useEffect, useState } from "react";
+import Image from "next/image";
+import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 const Hero3D = dynamic(() => import("./Hero3D"), { ssr: false });
 
-// The point cloud is 1.8 MB of geometry on top of the three.js runtime, and it
-// is scenery: the hero reads exactly the same without it, over the gradient
-// alone. So nobody pays for it who did not ask.
+// The hero shows a still render of the point cloud, and only becomes a live
+// WebGL scene when someone asks for it.
 //
-// Skipped outright on reduced motion, on Save-Data, and on narrow screens,
-// where it is mostly phones on mobile data and the cloud is barely legible
-// anyway. Otherwise it waits for the browser to go idle, so it never competes
-// with the hero headline for the first paint. `dynamic` only fetches the chunk
-// when the component actually renders, so a skip costs zero bytes.
-function useScenery() {
-  const [wanted, setWanted] = useState(false);
-
-  useEffect(() => {
-    const reduced = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-    const saveData = (
-      navigator as Navigator & { connection?: { saveData?: boolean } }
-    ).connection?.saveData;
-    if (reduced || saveData || window.innerWidth < 768) return;
-
-    const idle = window.requestIdleCallback;
-    if (idle) {
-      const id = idle(() => setWanted(true), { timeout: 3000 });
-      return () => window.cancelIdleCallback?.(id);
-    }
-    const id = window.setTimeout(() => setWanted(true), 1200);
-    return () => window.clearTimeout(id);
-  }, []);
-
-  return wanted;
-}
-
-// pointer-events-none: the hero is scenery, never a scroll trap. The page
-// must scroll normally with the cursor anywhere over it.
+// The cloud is 298k points. On a machine with a GPU that is cheap, but the
+// canvas renders continuously, so the page never goes idle: on software
+// rendering, which is what Lighthouse and any visitor without hardware
+// acceleration gets, each frame costs about a second. That measured as 30s of
+// total blocking time and a desktop performance score of 66, and it is real
+// battery and fan noise for those visitors, not only a number.
+//
+// The still is generated from the same lato-points.bin by
+// scripts/render-hero-still.py, with the same ramp, camera, fog and alpha, so
+// activating the live view does not change what is on screen. Nothing about
+// three.js is fetched until the button is pressed: next/dynamic only loads the
+// chunk when the component renders.
 export function Hero3DClient() {
-  const scenery = useScenery();
+  const [live, setLive] = useState(false);
+  const t = useTranslations("home.hero");
 
   return (
-    <div className="pointer-events-none absolute inset-0">
+    <div className="absolute inset-0">
       <div
         className="absolute inset-0 bg-gradient-to-b from-teal/60 via-ink to-ink"
         aria-hidden
       />
-      {scenery && <Hero3D />}
+
+      {live ? (
+        <div className="pointer-events-none absolute inset-0">
+          <Hero3D />
+        </div>
+      ) : (
+        <Image
+          src="/images/hero-lato-cloud.webp"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+      )}
+
+      {!live && (
+        <button
+          type="button"
+          onClick={() => setLive(true)}
+          className="absolute bottom-6 right-5 z-20 inline-flex items-center gap-2 rounded-full border border-hairline-dark bg-ink/70 px-4 py-2 text-xs font-medium text-muted-on-ink backdrop-blur transition-colors hover:text-white md:right-8"
+        >
+          <svg width="10" height="12" viewBox="0 0 10 12" fill="none" aria-hidden>
+            <path d="M1 1v10l8-5-8-5z" fill="currentColor" />
+          </svg>
+          {t("live")}
+        </button>
+      )}
     </div>
   );
 }
