@@ -32,25 +32,36 @@ Once someone has answered, the banner never returns. Clearing it for testing:
 
 ---
 
-## 2. 301 redirects from the old Wix site
+## 2. Point aeromine.info at the new site
 
-**Status:** not started. **Blocked on:** access to the Wix admin.
+**Status:** planned for the weekend of 2026-09-12/13. **Blocked on:** a domain
+transfer, and on Ioannis, who receives the auth code.
 
-The site now lives at `www.aeromine.gr` on Vercel. `aeromine.info` is the old
-Wix site on separate hosting and is due to be taken down. Whatever search
-history and backlinks that domain has are lost unless its URLs are redirected
-to their nearest equivalent here.
+The site is `www.aeromine.gr` on Vercel. `aeromine.info` still serves the old
+Wix site, and it holds the branded search traffic, the LinkedIn slug
+`linkedin.com/company/aeromine-info`, business cards and email signatures. It
+must never lapse.
 
-**This cannot be done from this repo.** A `next.config.ts` redirect only runs
-for requests that reach Vercel, and a request for `aeromine.info` never does.
-The 301s have to be configured on the Wix side by whoever has that login.
+⚠️ **Setting redirects inside Wix does not work.** Tested 2026-09-09: Wix's URL
+Redirect Manager only redirects within the same site, and entering an external
+target silently strips the host, so `https://www.aeromine.gr/el/services` saves
+as `/el/services` and 404s. The earlier note in this file saying "configure the
+301s on the Wix side" was wrong.
 
-Before the old site is switched off:
+The plan instead: transfer `aeromine.info` from Wix to Papaki, where
+`aeromine.gr` already lives, point its DNS at Vercel, and add it to this project
+as a redirect to `www.aeromine.gr`. The full order of operations, including the
+one irreversible mistake to avoid (cancelling the Wix plan too early), is
+recorded outside the repo with the domain and registrar details.
 
-- Map each old URL to its closest new one (`/services/...`, `/sectors`, `/work`,
-  `/aeroview-os`, `/contact`, `/faq`)
-- Set them as permanent 301s, pointing at `https://www.aeromine.gr/el/...`
-- Submit the new sitemap in Search Console afterwards
+**What lands in this repo, afterwards.** Old Wix paths mostly resolve on their
+own, because the next-intl middleware adds the locale prefix: `/`, `/services`,
+`/contact` and `/faq` all reach a 200 without any mapping. Only `/models`,
+`/portfolio`, `/blog`, `/post/*` (27 posts), `/forum`, `/groups`, `/members` and
+`/properties` 404. Those are worth roughly six `next.config.ts` rules, but only
+once `.info` actually resolves to Vercel: until then such a rule can never fire.
+
+Submit the sitemap in Search Console once the redirect is live.
 
 ---
 
@@ -91,6 +102,27 @@ is a JSON edit, no code change.
 `lib/models.ts` have no poster, so their cards show a plain dark panel with a
 load button. It works, but one screenshot per viewer would lift the gallery a
 lot.
+
+---
+
+## 4. "Request a demo" on the AeroVIEW page
+
+**Status:** never built. **Blocked on:** nothing. This one is just outstanding.
+
+Nikos asked for it in the original feedback and it was in the plan; it got lost
+between the other commits. The AeroVIEW page still ends with a plain "Talk to
+us" going to `/contact`.
+
+No new infrastructure needed. `app/api/contact/route.ts` already sends to
+`jbrintakis@aeromine.org` through Resend; the demo form reuses it with its own
+subject (`AeroVIEW OS demo request: <name>`) so it is separable in the inbox,
+the visitor as `reply_to`, and the same honeypot and validation.
+
+There is no sandbox account, so the button opens the form, never a fake login.
+
+Related, and worth doing before any of this matters: the Resend sender is still
+`onboarding@resend.dev`, their sandbox domain. It needs a verified
+`aeromine.gr` sender or both contact and demo mail risk going to spam.
 
 ---
 
